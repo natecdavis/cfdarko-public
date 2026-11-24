@@ -1,0 +1,116 @@
+{
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "n_features": 55,
+  "features": [
+    "height_in",
+    "weight_lbs",
+    "class_year_int",
+    "conference_tier",
+    "team_sp_offense",
+    "team_sp_defense",
+    "team_sp_overall",
+    "career_team_off_ppa_mean",
+    "career_team_off_success_rate_mean",
+    "career_team_off_explosiveness_mean",
+    "career_team_off_stuff_rate_mean",
+    "career_team_def_ppa_mean",
+    "career_team_def_success_rate_mean",
+    "career_team_def_stuff_rate_mean",
+    "career_team_def_explosiveness_mean",
+    "career_team_line_yards_avg_mean",
+    "career_team_second_level_yards_avg_mean",
+    "career_team_open_field_yards_avg_mean",
+    "career_team_rushing_power_success_mean",
+    "career_team_rushing_stuff_rate_mean",
+    "career_team_havoc_total_mean",
+    "career_team_havoc_front_seven_mean",
+    "career_team_havoc_db_mean",
+    "recruiting_stars",
+    "recruiting_composite",
+    "recruit_rank_national",
+    "recruit_rank_position",
+    "age_at_draft",
+    "n_transfers_career",
+    "n_games",
+    "n_seasons",
+    "pff_seasons",
+    "nfl_lg_pass_att_pg",
+    "nfl_lg_completion_pct",
+    "nfl_lg_pass_yards_pg",
+    "nfl_lg_pass_td_pg",
+    "nfl_lg_rush_att_pg",
+    "nfl_lg_rush_yards_pg",
+    "nfl_lg_pts_pg",
+    "nfl_lg_plays_pg",
+    "nfl_lg_sacks_pg",
+    "nfl_lg_turnovers_pg",
+    "combine_invited",
+    "combine_broad_jump_z",
+    "combine_forty_z",
+    "hasan_rank",
+    "pos_code",
+    "board_era",
+    "pff_side_grades_mean",
+    "pff_side_grades_peak",
+    "pff_side_grades_last",
+    "pff_side_snap_counts_mean",
+    "pff_side_snap_counts_peak",
+    "pff_side_snap_counts_last",
+    "pff_side_snap_counts_total"
+  ],
+  "stage1_last_season": 2024,
+  "stage2_last_season": 2021,
+  "n_stage1": 78168,
+  "n_stage2": 4982,
+  "trees": [
+    [
+      354,
+      219
+    ],
+    [
+      396,
+      208
+    ],
+    [
+      395,
+      177
+    ],
+    [
+      360,
+      222
+    ],
+    [
+      410,
+      162
+    ]
+  ],
+  "folds": [
+    [
+      2009,
+      2010,
+      2012
+    ],
+    [
+      2012,
+      2013,
+      2015
+    ],
+    [
+      2015,
+      2016,
+      2018
+    ],
+    [
+      2018,
+      2019,
+      2021
+    ]
+  ],
+  "n_oof": 56459
+}

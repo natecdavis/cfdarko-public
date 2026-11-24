@@ -1,0 +1,9 @@
+{
+  "method": "quantile",
+  "n_train_drafted": 2289,
+  "n_udfa_imputed": 1292,
+  "imputed_mean": 0.10858478706158518,
+  "drafted_observed_mean": 0.22018380449695124,
+  "imputed_sd": 0.10046258551769868,
+  "drafted_observed_sd": 0.16435776035016317
+}

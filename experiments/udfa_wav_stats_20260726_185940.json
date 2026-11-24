@@ -1,0 +1,8 @@
+{
+  "n_train_drafted": 2289,
+  "n_udfa_imputed": 1292,
+  "imputed_mean": 0.11019468317802525,
+  "drafted_observed_mean": 0.22018380449695124,
+  "imputed_sd": 0.07909476636545211,
+  "drafted_observed_sd": 0.16435776035016317
+}

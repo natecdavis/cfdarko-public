@@ -1,0 +1,2942 @@
+{
+  "run_id": "20260510_141740_b4bd0fd9532e",
+  "timestamp": "20260510_141740",
+  "config_hash": "b4bd0fd9532e",
+  "config": {
+    "ROLE_LABEL_HORIZON_YEARS": 3,
+    "DRAFT_TRAIN_CUTOFF_YEAR": 2019,
+    "DRAFT_VAL_START_YEAR": 2020,
+    "FINAL_TRAIN_CUTOFF": 2024,
+    "START_YEAR": 2004,
+    "END_YEAR": 2026,
+    "LGBM_PARAMS_DEFAULTS": {
+      "n_estimators": 500,
+      "learning_rate": 0.05,
+      "max_depth": 4,
+      "num_leaves": 15,
+      "min_child_samples": 20,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "reg_alpha": 0.1,
+      "reg_lambda": 1.0,
+      "random_state": 42,
+      "verbose": -1
+    }
+  },
+  "args": {
+    "test": false,
+    "tune": false,
+    "tune_trials": 30
+  },
+  "models": {
+    "QB_role": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.04929706898050769,
+      "avg_best_iter": 296,
+      "params_source": "tuned",
+      "cv_logloss": 0.06772827852955927,
+      "cv_auc": 0.9932645015284479,
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.028274350368704695,
+      "holdout_logloss": 0.04500119211326026,
+      "holdout_auc": 0.9956709956709956,
+      "holdout_spearman": 0.3659848287780917,
+      "n_full_train": 3487,
+      "feature_importance_top20": [
+        {
+          "feature": "age_at_draft",
+          "importance": 360
+        },
+        {
+          "feature": "combine_wt_z",
+          "importance": 268
+        },
+        {
+          "feature": "ewma_pass_share",
+          "importance": 168
+        },
+        {
+          "feature": "team_sp_overall",
+          "importance": 146
+        },
+        {
+          "feature": "ewma_var_pass_tds",
+          "importance": 145
+        },
+        {
+          "feature": "kalman_mean_pass_share",
+          "importance": 145
+        },
+        {
+          "feature": "ewma_yoy_interceptions",
+          "importance": 141
+        },
+        {
+          "feature": "career_team_def_stuff_rate_mean",
+          "importance": 140
+        },
+        {
+          "feature": "team_sp_offense",
+          "importance": 135
+        },
+        {
+          "feature": "combine_ht_z",
+          "importance": 127
+        },
+        {
+          "feature": "n_games",
+          "importance": 123
+        },
+        {
+          "feature": "pff_scrambles_mean",
+          "importance": 115
+        },
+        {
+          "feature": "career_team_off_explosiveness_mean",
+          "importance": 111
+        },
+        {
+          "feature": "combine_vertical_z",
+          "importance": 111
+        },
+        {
+          "feature": "kalman_mean_pass_tds",
+          "importance": 108
+        },
+        {
+          "feature": "kalman_yoy_interceptions",
+          "importance": 104
+        },
+        {
+          "feature": "career_team_def_ppa_mean",
+          "importance": 102
+        },
+        {
+          "feature": "ewma_yoy_pass_att",
+          "importance": 99
+        },
+        {
+          "feature": "kalman_yoy_pass_yards",
+          "importance": 99
+        },
+        {
+          "feature": "ewma_pass_tds",
+          "importance": 98
+        }
+      ]
+    },
+    "QB_impact": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.0035979065842419926,
+      "avg_best_iter": 22,
+      "params_source": "tuned",
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.0014904940393051483,
+      "holdout_spearman": 0.9150473067565339,
+      "n_full_train": 3487,
+      "quantile_alphas": [
+        "p10",
+        "p50",
+        "p90"
+      ],
+      "feature_importance_top20": [
+        {
+          "feature": "hasan_rank",
+          "importance": 11
+        },
+        {
+          "feature": "combine_wt_z",
+          "importance": 9
+        },
+        {
+          "feature": "combine_invited",
+          "importance": 4
+        },
+        {
+          "feature": "combine_broad_jump_z",
+          "importance": 3
+        },
+        {
+          "feature": "recruit_rank_national",
+          "importance": 2
+        },
+        {
+          "feature": "age_at_draft",
+          "importance": 2
+        },
+        {
+          "feature": "team_sp_overall",
+          "importance": 2
+        },
+        {
+          "feature": "pff_accuracy_percent_mean",
+          "importance": 1
+        },
+        {
+          "feature": "combine_hand",
+          "importance": 1
+        },
+        {
+          "feature": "combine_ht_z",
+          "importance": 1
+        },
+        {
+          "feature": "ewma_var_rush_tds",
+          "importance": 1
+        },
+        {
+          "feature": "pff_first_downs_peak",
+          "importance": 1
+        },
+        {
+          "feature": "pff_no_pressure_completion_percent_mean",
+          "importance": 1
+        },
+        {
+          "feature": "career_team_off_ppa_mean",
+          "importance": 1
+        },
+        {
+          "feature": "ewma_var_pass_tds",
+          "importance": 1
+        },
+        {
+          "feature": "team_sp_defense",
+          "importance": 0
+        },
+        {
+          "feature": "team_sp_offense",
+          "importance": 0
+        },
+        {
+          "feature": "conference_tier",
+          "importance": 0
+        },
+        {
+          "feature": "class_year_int",
+          "importance": 0
+        },
+        {
+          "feature": "weight_lbs",
+          "importance": 0
+        }
+      ]
+    },
+    "QB_impact_wav": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.014799334294991928,
+      "avg_best_iter": 15,
+      "params_source": "tuned",
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.011195706922867905,
+      "holdout_spearman": 0.5035654227506396,
+      "n_full_train": 3487,
+      "feature_importance_top20": [
+        {
+          "feature": "combine_wt_z",
+          "importance": 11
+        },
+        {
+          "feature": "hasan_rank",
+          "importance": 10
+        },
+        {
+          "feature": "combine_broad_jump_z",
+          "importance": 6
+        },
+        {
+          "feature": "combine_forty_z",
+          "importance": 5
+        },
+        {
+          "feature": "combine_arm_z",
+          "importance": 4
+        },
+        {
+          "feature": "nfl_lg_pass_att_pg",
+          "importance": 3
+        },
+        {
+          "feature": "pff_no_blitz_grades_pass_peak",
+          "importance": 3
+        },
+        {
+          "feature": "kalman_mean_rush_tds",
+          "importance": 2
+        },
+        {
+          "feature": "pff_sack_percent_peak",
+          "importance": 2
+        },
+        {
+          "feature": "team_sp_overall",
+          "importance": 2
+        },
+        {
+          "feature": "pff_epa_peak",
+          "importance": 2
+        },
+        {
+          "feature": "kalman_mean_completion_pct",
+          "importance": 1
+        },
+        {
+          "feature": "ewma_completion_pct",
+          "importance": 1
+        },
+        {
+          "feature": "pff_epa_mean",
+          "importance": 1
+        },
+        {
+          "feature": "pff_no_blitz_btt_rate_mean",
+          "importance": 1
+        },
+        {
+          "feature": "kalman_mean_rush_yards",
+          "importance": 1
+        },
+        {
+          "feature": "kalman_yoy_pass_share",
+          "importance": 1
+        },
+        {
+          "feature": "ewma_yoy_rush_tds",
+          "importance": 1
+        },
+        {
+          "feature": "kalman_mean_ppa_avg_passing",
+          "importance": 1
+        },
+        {
+          "feature": "ewma_yoy_pass_tds",
+          "importance": 1
+        }
+      ]
+    },
+    "RB_role": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.05788248952351574,
+      "avg_best_iter": 8,
+      "params_source": "tuned",
+      "cv_logloss": 0.08672131281469785,
+      "cv_auc": 0.9819395933851538,
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.03458160363299327,
+      "holdout_logloss": 0.06353251740514616,
+      "holdout_auc": 0.9974030680033821,
+      "holdout_spearman": 0.6000786486794087,
+      "n_full_train": 5916,
+      "feature_importance_top20": [
+        {
+          "feature": "combine_invited",
+          "importance": 3
+        },
+        {
+          "feature": "age_at_draft",
+          "importance": 2
+        },
+        {
+          "feature": "combine_forty_z",
+          "importance": 2
+        },
+        {
+          "feature": "nfl_lg_pass_yards_pg",
+          "importance": 2
+        },
+        {
+          "feature": "combine_arm_z",
+          "importance": 2
+        },
+        {
+          "feature": "hasan_rank",
+          "importance": 1
+        },
+        {
+          "feature": "kalman_var_ppa_avg_rushing",
+          "importance": 1
+        },
+        {
+          "feature": "kalman_mean_rush_share",
+          "importance": 1
+        },
+        {
+          "feature": "pff_man_yprr_mean",
+          "importance": 1
+        },
+        {
+          "feature": "kalman_var_rec_share",
+          "importance": 1
+        },
+        {
+          "feature": "kalman_mean_rec_yards",
+          "importance": 1
+        },
+        {
+          "feature": "pff_yards_after_contact_peak",
+          "importance": 1
+        },
+        {
+          "feature": "pff_targets_mean",
+          "importance": 1
+        },
+        {
+          "feature": "kalman_mean_rush_tds",
+          "importance": 1
+        },
+        {
+          "feature": "pff_yards_after_contact_last",
+          "importance": 1
+        },
+        {
+          "feature": "pff_man_targeted_qb_rating_mean",
+          "importance": 1
+        },
+        {
+          "feature": "pff_grades_offense_last",
+          "importance": 1
+        },
+        {
+          "feature": "n_seasons",
+          "importance": 1
+        },
+        {
+          "feature": "combine_wt_z",
+          "importance": 1
+        },
+        {
+          "feature": "ewma_yoy_rush_share",
+          "importance": 0
+        }
+      ]
+    },
+    "RB_impact": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.0010986489720651873,
+      "avg_best_iter": 431,
+      "params_source": "tuned",
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.0006198569634569995,
+      "holdout_spearman": 0.5180655733185636,
+      "n_full_train": 5916,
+      "quantile_alphas": [
+        "p10",
+        "p50",
+        "p90"
+      ],
+      "feature_importance_top20": [
+        {
+          "feature": "combine_forty_z",
+          "importance": 175
+        },
+        {
+          "feature": "hasan_rank",
+          "importance": 135
+        },
+        {
+          "feature": "combine_wt_z",
+          "importance": 102
+        },
+        {
+          "feature": "ewma_rush_share",
+          "importance": 96
+        },
+        {
+          "feature": "combine_ht",
+          "importance": 92
+        },
+        {
+          "feature": "ewma_yoy_rec",
+          "importance": 70
+        },
+        {
+          "feature": "kalman_yoy_rush_share",
+          "importance": 66
+        },
+        {
+          "feature": "ewma_var_rec_share",
+          "importance": 59
+        },
+        {
+          "feature": "combine_broad_jump_z",
+          "importance": 57
+        },
+        {
+          "feature": "kalman_mean_yards_per_carry",
+          "importance": 52
+        },
+        {
+          "feature": "pff_yprr_mean",
+          "importance": 49
+        },
+        {
+          "feature": "combine_vertical_z",
+          "importance": 48
+        },
+        {
+          "feature": "age_at_draft",
+          "importance": 44
+        },
+        {
+          "feature": "kalman_yoy_rec_share",
+          "importance": 44
+        },
+        {
+          "feature": "pff_grades_pass_route_peak",
+          "importance": 41
+        },
+        {
+          "feature": "kalman_yoy_rush_yards",
+          "importance": 35
+        },
+        {
+          "feature": "combine_hand",
+          "importance": 34
+        },
+        {
+          "feature": "ewma_var_rec",
+          "importance": 32
+        },
+        {
+          "feature": "ewma_yoy_rush_share",
+          "importance": 26
+        },
+        {
+          "feature": "ewma_var_rush_tds",
+          "importance": 26
+        }
+      ]
+    },
+    "RB_impact_wav": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.01101632695312391,
+      "avg_best_iter": 81,
+      "params_source": "tuned",
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.012299487524358886,
+      "holdout_spearman": 0.3427999546972262,
+      "n_full_train": 5916,
+      "feature_importance_top20": [
+        {
+          "feature": "combine_wt_z",
+          "importance": 78
+        },
+        {
+          "feature": "hasan_rank",
+          "importance": 52
+        },
+        {
+          "feature": "combine_forty_z",
+          "importance": 41
+        },
+        {
+          "feature": "combine_vertical_z",
+          "importance": 38
+        },
+        {
+          "feature": "combine_bench_z",
+          "importance": 34
+        },
+        {
+          "feature": "combine_hand",
+          "importance": 26
+        },
+        {
+          "feature": "combine_broad_jump_z",
+          "importance": 25
+        },
+        {
+          "feature": "combine_ht",
+          "importance": 21
+        },
+        {
+          "feature": "combine_shuttle_z",
+          "importance": 20
+        },
+        {
+          "feature": "kalman_mean_rec_share",
+          "importance": 19
+        },
+        {
+          "feature": "kalman_mean_rush_share",
+          "importance": 18
+        },
+        {
+          "feature": "combine_arm_z",
+          "importance": 18
+        },
+        {
+          "feature": "kalman_yoy_yards_per_carry",
+          "importance": 18
+        },
+        {
+          "feature": "team_sp_overall",
+          "importance": 17
+        },
+        {
+          "feature": "recruiting_composite",
+          "importance": 16
+        },
+        {
+          "feature": "ewma_var_rec_share",
+          "importance": 16
+        },
+        {
+          "feature": "kalman_yoy_rec",
+          "importance": 16
+        },
+        {
+          "feature": "ewma_rush_share",
+          "importance": 16
+        },
+        {
+          "feature": "ewma_rush_tds",
+          "importance": 15
+        },
+        {
+          "feature": "ewma_yoy_rec",
+          "importance": 15
+        }
+      ]
+    },
+    "WR_role": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.06511416857949201,
+      "avg_best_iter": 40,
+      "params_source": "tuned",
+      "cv_logloss": 0.0882902042704993,
+      "cv_auc": 0.9894096567106708,
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.028937159249107083,
+      "holdout_logloss": 0.05450779357382646,
+      "holdout_auc": 0.9936274795515921,
+      "holdout_spearman": 0.409865866829805,
+      "n_full_train": 10448,
+      "feature_importance_top20": [
+        {
+          "feature": "age_at_draft",
+          "importance": 54
+        },
+        {
+          "feature": "nfl_lg_pass_yards_pg",
+          "importance": 16
+        },
+        {
+          "feature": "combine_ht_z",
+          "importance": 13
+        },
+        {
+          "feature": "kalman_mean_rec_share",
+          "importance": 9
+        },
+        {
+          "feature": "class_year_int",
+          "importance": 9
+        },
+        {
+          "feature": "hasan_rank",
+          "importance": 7
+        },
+        {
+          "feature": "combine_invited",
+          "importance": 7
+        },
+        {
+          "feature": "ewma_rec_share",
+          "importance": 7
+        },
+        {
+          "feature": "pff_grades_pass_route_last",
+          "importance": 7
+        },
+        {
+          "feature": "kalman_mean_rec",
+          "importance": 7
+        },
+        {
+          "feature": "combine_broad_jump_z",
+          "importance": 7
+        },
+        {
+          "feature": "combine_vertical_z",
+          "importance": 7
+        },
+        {
+          "feature": "nfl_lg_completion_pct",
+          "importance": 6
+        },
+        {
+          "feature": "recruit_rank_national",
+          "importance": 5
+        },
+        {
+          "feature": "pff_grades_offense_last",
+          "importance": 5
+        },
+        {
+          "feature": "career_team_def_ppa_mean",
+          "importance": 5
+        },
+        {
+          "feature": "nfl_lg_pass_att_pg",
+          "importance": 5
+        },
+        {
+          "feature": "combine_hand_z",
+          "importance": 5
+        },
+        {
+          "feature": "kalman_var_rec_yards",
+          "importance": 4
+        },
+        {
+          "feature": "pff_man_yprr_peak",
+          "importance": 4
+        }
+      ]
+    },
+    "WR_impact": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.0014592393686713664,
+      "avg_best_iter": 14,
+      "params_source": "tuned",
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.0010523565935746022,
+      "holdout_spearman": 0.8770870593471578,
+      "n_full_train": 10448,
+      "quantile_alphas": [
+        "p10",
+        "p50",
+        "p90"
+      ],
+      "feature_importance_top20": [
+        {
+          "feature": "hasan_rank",
+          "importance": 11
+        },
+        {
+          "feature": "ewma_rec_share",
+          "importance": 8
+        },
+        {
+          "feature": "combine_wt_z",
+          "importance": 5
+        },
+        {
+          "feature": "combine_forty_z",
+          "importance": 5
+        },
+        {
+          "feature": "combine_shuttle_z",
+          "importance": 4
+        },
+        {
+          "feature": "kalman_mean_rec_yards",
+          "importance": 4
+        },
+        {
+          "feature": "combine_hand_z",
+          "importance": 3
+        },
+        {
+          "feature": "combine_broad_jump_z",
+          "importance": 2
+        },
+        {
+          "feature": "combine_bench_z",
+          "importance": 2
+        },
+        {
+          "feature": "recruit_rank_national",
+          "importance": 2
+        },
+        {
+          "feature": "pff_targeted_qb_rating_peak",
+          "importance": 1
+        },
+        {
+          "feature": "kalman_mean_rec_tds",
+          "importance": 1
+        },
+        {
+          "feature": "kalman_mean_rec_share",
+          "importance": 1
+        },
+        {
+          "feature": "ewma_rec",
+          "importance": 1
+        },
+        {
+          "feature": "career_team_off_success_rate_mean",
+          "importance": 1
+        },
+        {
+          "feature": "recruiting_stars",
+          "importance": 1
+        },
+        {
+          "feature": "kalman_var_rec_yards",
+          "importance": 1
+        },
+        {
+          "feature": "kalman_mean_rec",
+          "importance": 1
+        },
+        {
+          "feature": "combine_arm_z",
+          "importance": 1
+        },
+        {
+          "feature": "combine_ht_z",
+          "importance": 1
+        }
+      ]
+    },
+    "WR_impact_wav": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.009787944230617407,
+      "avg_best_iter": 147,
+      "params_source": "tuned",
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.005844250842611187,
+      "holdout_spearman": 0.34230570239740693,
+      "n_full_train": 10448,
+      "feature_importance_top20": [
+        {
+          "feature": "hasan_rank",
+          "importance": 158
+        },
+        {
+          "feature": "combine_forty_z",
+          "importance": 90
+        },
+        {
+          "feature": "combine_ht_z",
+          "importance": 77
+        },
+        {
+          "feature": "combine_broad_jump_z",
+          "importance": 66
+        },
+        {
+          "feature": "combine_hand_z",
+          "importance": 60
+        },
+        {
+          "feature": "combine_vertical_z",
+          "importance": 58
+        },
+        {
+          "feature": "kalman_mean_rec_tds",
+          "importance": 37
+        },
+        {
+          "feature": "combine_cone_z",
+          "importance": 33
+        },
+        {
+          "feature": "kalman_mean_rec_share",
+          "importance": 27
+        },
+        {
+          "feature": "ewma_rec_share",
+          "importance": 27
+        },
+        {
+          "feature": "ewma_rec_yards",
+          "importance": 26
+        },
+        {
+          "feature": "pff_targeted_qb_rating_mean",
+          "importance": 26
+        },
+        {
+          "feature": "nfl_lg_pass_yards_pg",
+          "importance": 25
+        },
+        {
+          "feature": "combine_shuttle_z",
+          "importance": 22
+        },
+        {
+          "feature": "combine_wt_z",
+          "importance": 20
+        },
+        {
+          "feature": "combine_arm_z",
+          "importance": 20
+        },
+        {
+          "feature": "kalman_yoy_rec_share",
+          "importance": 20
+        },
+        {
+          "feature": "recruit_rank_national",
+          "importance": 18
+        },
+        {
+          "feature": "kalman_mean_rec",
+          "importance": 18
+        },
+        {
+          "feature": "pff_zone_targeted_qb_rating_mean",
+          "importance": 17
+        }
+      ]
+    },
+    "TE_role": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.06797078835233299,
+      "avg_best_iter": 121,
+      "params_source": "tuned",
+      "cv_logloss": 0.09267115231739281,
+      "cv_auc": 0.9920051709112989,
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.03374202710512668,
+      "holdout_logloss": 0.04734171179276009,
+      "holdout_auc": 0.9981609195402299,
+      "holdout_spearman": 0.4113971520096096,
+      "n_full_train": 4193,
+      "feature_importance_top20": [
+        {
+          "feature": "age_at_draft",
+          "importance": 129
+        },
+        {
+          "feature": "nfl_lg_pass_yards_pg",
+          "importance": 88
+        },
+        {
+          "feature": "ewma_rec_share",
+          "importance": 68
+        },
+        {
+          "feature": "height_in",
+          "importance": 67
+        },
+        {
+          "feature": "combine_ht_z",
+          "importance": 64
+        },
+        {
+          "feature": "kalman_mean_rec_share",
+          "importance": 59
+        },
+        {
+          "feature": "nfl_lg_pass_att_pg",
+          "importance": 58
+        },
+        {
+          "feature": "kalman_var_yards_per_rec",
+          "importance": 57
+        },
+        {
+          "feature": "combine_wt_z",
+          "importance": 52
+        },
+        {
+          "feature": "ewma_rec",
+          "importance": 49
+        },
+        {
+          "feature": "career_team_def_ppa_mean",
+          "importance": 47
+        },
+        {
+          "feature": "combine_invited",
+          "importance": 46
+        },
+        {
+          "feature": "pff_grades_offense_last",
+          "importance": 46
+        },
+        {
+          "feature": "pff_inline_snaps_last",
+          "importance": 43
+        },
+        {
+          "feature": "kalman_var_rec_share",
+          "importance": 43
+        },
+        {
+          "feature": "nfl_lg_rush_att_pg",
+          "importance": 42
+        },
+        {
+          "feature": "ewma_yoy_rec_yards",
+          "importance": 41
+        },
+        {
+          "feature": "weight_lbs",
+          "importance": 39
+        },
+        {
+          "feature": "n_games",
+          "importance": 38
+        },
+        {
+          "feature": "pff_inline_snaps_mean",
+          "importance": 37
+        }
+      ]
+    },
+    "TE_impact": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.0012637995053803714,
+      "avg_best_iter": 104,
+      "params_source": "tuned",
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.0006728718097066169,
+      "holdout_spearman": 0.5851136793779447,
+      "n_full_train": 4193,
+      "quantile_alphas": [
+        "p10",
+        "p50",
+        "p90"
+      ],
+      "feature_importance_top20": [
+        {
+          "feature": "hasan_rank",
+          "importance": 59
+        },
+        {
+          "feature": "combine_wt_z",
+          "importance": 56
+        },
+        {
+          "feature": "combine_ht_z",
+          "importance": 37
+        },
+        {
+          "feature": "combine_vertical_z",
+          "importance": 30
+        },
+        {
+          "feature": "combine_cone_z",
+          "importance": 26
+        },
+        {
+          "feature": "ewma_yoy_rec_yards",
+          "importance": 23
+        },
+        {
+          "feature": "kalman_mean_rec_yards",
+          "importance": 21
+        },
+        {
+          "feature": "combine_bench_z",
+          "importance": 20
+        },
+        {
+          "feature": "combine_broad_jump_z",
+          "importance": 19
+        },
+        {
+          "feature": "age_at_draft",
+          "importance": 18
+        },
+        {
+          "feature": "kalman_var_rec_share",
+          "importance": 18
+        },
+        {
+          "feature": "ewma_var_rec_yards",
+          "importance": 17
+        },
+        {
+          "feature": "kalman_mean_rec_share",
+          "importance": 15
+        },
+        {
+          "feature": "ewma_rec_share",
+          "importance": 13
+        },
+        {
+          "feature": "combine_forty_z",
+          "importance": 12
+        },
+        {
+          "feature": "kalman_mean_rec",
+          "importance": 10
+        },
+        {
+          "feature": "ewma_yoy_rec",
+          "importance": 9
+        },
+        {
+          "feature": "ewma_yards_per_rec",
+          "importance": 9
+        },
+        {
+          "feature": "career_team_def_success_rate_mean",
+          "importance": 9
+        },
+        {
+          "feature": "kalman_yoy_rec",
+          "importance": 9
+        }
+      ]
+    },
+    "TE_impact_wav": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.007274616857085369,
+      "avg_best_iter": 279,
+      "params_source": "tuned",
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.00654688900325828,
+      "holdout_spearman": 0.3048720327270153,
+      "n_full_train": 4193,
+      "feature_importance_top20": [
+        {
+          "feature": "hasan_rank",
+          "importance": 282
+        },
+        {
+          "feature": "combine_wt_z",
+          "importance": 181
+        },
+        {
+          "feature": "kalman_var_rec_share",
+          "importance": 172
+        },
+        {
+          "feature": "combine_shuttle_z",
+          "importance": 168
+        },
+        {
+          "feature": "combine_forty_z",
+          "importance": 166
+        },
+        {
+          "feature": "kalman_mean_rec",
+          "importance": 131
+        },
+        {
+          "feature": "ewma_rec_share",
+          "importance": 115
+        },
+        {
+          "feature": "combine_cone_z",
+          "importance": 104
+        },
+        {
+          "feature": "combine_vertical_z",
+          "importance": 104
+        },
+        {
+          "feature": "age_at_draft",
+          "importance": 101
+        },
+        {
+          "feature": "kalman_mean_rec_share",
+          "importance": 101
+        },
+        {
+          "feature": "combine_ht_z",
+          "importance": 94
+        },
+        {
+          "feature": "kalman_yoy_yards_per_rec",
+          "importance": 93
+        },
+        {
+          "feature": "team_sp_defense",
+          "importance": 86
+        },
+        {
+          "feature": "team_sp_overall",
+          "importance": 84
+        },
+        {
+          "feature": "nfl_lg_pass_att_pg",
+          "importance": 75
+        },
+        {
+          "feature": "ewma_yoy_rec_yards",
+          "importance": 74
+        },
+        {
+          "feature": "ewma_yoy_ppa_avg",
+          "importance": 73
+        },
+        {
+          "feature": "ewma_rec_yards",
+          "importance": 72
+        },
+        {
+          "feature": "pff_grades_offense_last",
+          "importance": 71
+        }
+      ]
+    },
+    "OL_role": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.04968764019171593,
+      "avg_best_iter": 337,
+      "params_source": "tuned",
+      "cv_logloss": 0.06666054549174652,
+      "cv_auc": 0.9960850419113709,
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.02204646695027233,
+      "holdout_logloss": 0.0418347314708206,
+      "holdout_auc": 0.9983833540454641,
+      "holdout_spearman": 0.42344069792009387,
+      "n_full_train": 11541,
+      "feature_importance_top20": [
+        {
+          "feature": "age_at_draft",
+          "importance": 413
+        },
+        {
+          "feature": "combine_wt",
+          "importance": 162
+        },
+        {
+          "feature": "hasan_rank",
+          "importance": 150
+        },
+        {
+          "feature": "combine_invited",
+          "importance": 122
+        },
+        {
+          "feature": "combine_forty_z",
+          "importance": 108
+        },
+        {
+          "feature": "pff_snap_counts_offense_last",
+          "importance": 97
+        },
+        {
+          "feature": "combine_arm_z",
+          "importance": 88
+        },
+        {
+          "feature": "pff_true_pass_set_snap_counts_pass_block_peak",
+          "importance": 79
+        },
+        {
+          "feature": "weight_lbs",
+          "importance": 69
+        },
+        {
+          "feature": "combine_broad_jump_z",
+          "importance": 68
+        },
+        {
+          "feature": "class_year_int",
+          "importance": 67
+        },
+        {
+          "feature": "career_team_off_explosiveness_mean",
+          "importance": 65
+        },
+        {
+          "feature": "nfl_lg_pass_att_pg",
+          "importance": 61
+        },
+        {
+          "feature": "nfl_lg_completion_pct",
+          "importance": 58
+        },
+        {
+          "feature": "pff_grades_offense_mean",
+          "importance": 54
+        },
+        {
+          "feature": "height_in",
+          "importance": 53
+        },
+        {
+          "feature": "combine_hand",
+          "importance": 53
+        },
+        {
+          "feature": "pff_grades_pass_block_last",
+          "importance": 50
+        },
+        {
+          "feature": "nfl_lg_pts_pg",
+          "importance": 47
+        },
+        {
+          "feature": "team_sp_offense",
+          "importance": 45
+        }
+      ]
+    },
+    "OL_impact": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.0014336394024836861,
+      "avg_best_iter": 131,
+      "params_source": "tuned",
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.0009038884292424422,
+      "holdout_spearman": 0.8973587597522164,
+      "n_full_train": 11541,
+      "quantile_alphas": [
+        "p10",
+        "p50",
+        "p90"
+      ],
+      "feature_importance_top20": [
+        {
+          "feature": "hasan_rank",
+          "importance": 223
+        },
+        {
+          "feature": "combine_forty_z",
+          "importance": 217
+        },
+        {
+          "feature": "combine_shuttle_z",
+          "importance": 159
+        },
+        {
+          "feature": "combine_broad_jump_z",
+          "importance": 136
+        },
+        {
+          "feature": "combine_vertical_z",
+          "importance": 110
+        },
+        {
+          "feature": "combine_bench",
+          "importance": 101
+        },
+        {
+          "feature": "combine_wt",
+          "importance": 91
+        },
+        {
+          "feature": "age_at_draft",
+          "importance": 75
+        },
+        {
+          "feature": "combine_cone_z",
+          "importance": 70
+        },
+        {
+          "feature": "combine_hand",
+          "importance": 69
+        },
+        {
+          "feature": "combine_arm_z",
+          "importance": 67
+        },
+        {
+          "feature": "pff_zone_grades_run_block_mean",
+          "importance": 63
+        },
+        {
+          "feature": "pff_grades_run_block_last",
+          "importance": 62
+        },
+        {
+          "feature": "team_sp_defense",
+          "importance": 53
+        },
+        {
+          "feature": "pff_grades_run_block_peak",
+          "importance": 52
+        },
+        {
+          "feature": "recruiting_composite",
+          "importance": 51
+        },
+        {
+          "feature": "combine_ht",
+          "importance": 41
+        },
+        {
+          "feature": "pff_true_pass_set_snap_counts_pass_block_peak",
+          "importance": 38
+        },
+        {
+          "feature": "pff_true_pass_set_snap_counts_pass_block_mean",
+          "importance": 32
+        },
+        {
+          "feature": "pff_zone_grades_run_block_last",
+          "importance": 31
+        }
+      ]
+    },
+    "OL_impact_wav": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.013036889900246531,
+      "avg_best_iter": 89,
+      "params_source": "tuned",
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.013693374032727726,
+      "holdout_spearman": 0.3345892207602942,
+      "n_full_train": 11541,
+      "feature_importance_top20": [
+        {
+          "feature": "hasan_rank",
+          "importance": 160
+        },
+        {
+          "feature": "combine_forty_z",
+          "importance": 73
+        },
+        {
+          "feature": "combine_wt",
+          "importance": 53
+        },
+        {
+          "feature": "pff_grades_offense_last",
+          "importance": 30
+        },
+        {
+          "feature": "combine_ht",
+          "importance": 28
+        },
+        {
+          "feature": "combine_broad_jump_z",
+          "importance": 28
+        },
+        {
+          "feature": "weight_lbs",
+          "importance": 27
+        },
+        {
+          "feature": "combine_arm_z",
+          "importance": 26
+        },
+        {
+          "feature": "age_at_draft",
+          "importance": 24
+        },
+        {
+          "feature": "combine_invited",
+          "importance": 18
+        },
+        {
+          "feature": "pff_true_pass_set_snap_counts_pass_block_peak",
+          "importance": 17
+        },
+        {
+          "feature": "combine_bench",
+          "importance": 16
+        },
+        {
+          "feature": "pff_gap_grades_run_block_last",
+          "importance": 15
+        },
+        {
+          "feature": "pff_zone_grades_run_block_last",
+          "importance": 15
+        },
+        {
+          "feature": "height_in",
+          "importance": 15
+        },
+        {
+          "feature": "combine_vertical_z",
+          "importance": 14
+        },
+        {
+          "feature": "pff_grades_pass_block_last",
+          "importance": 14
+        },
+        {
+          "feature": "recruiting_composite",
+          "importance": 14
+        },
+        {
+          "feature": "combine_shuttle_z",
+          "importance": 14
+        },
+        {
+          "feature": "team_sp_offense",
+          "importance": 13
+        }
+      ]
+    },
+    "DL_role": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.07671746100628574,
+      "avg_best_iter": 183,
+      "params_source": "tuned",
+      "cv_logloss": 0.10405398352319067,
+      "cv_auc": 0.9937919094273465,
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.040711775482948916,
+      "holdout_logloss": 0.06586046195972696,
+      "holdout_auc": 0.9987761848755523,
+      "holdout_spearman": 0.4624881378309257,
+      "n_full_train": 10387,
+      "feature_importance_top20": [
+        {
+          "feature": "age_at_draft",
+          "importance": 287
+        },
+        {
+          "feature": "combine_wt_z",
+          "importance": 80
+        },
+        {
+          "feature": "combine_ht_z",
+          "importance": 79
+        },
+        {
+          "feature": "class_year_int",
+          "importance": 74
+        },
+        {
+          "feature": "weight_lbs",
+          "importance": 71
+        },
+        {
+          "feature": "height_in",
+          "importance": 62
+        },
+        {
+          "feature": "pff_grades_defense_last",
+          "importance": 59
+        },
+        {
+          "feature": "recruiting_composite",
+          "importance": 57
+        },
+        {
+          "feature": "combine_forty_z",
+          "importance": 51
+        },
+        {
+          "feature": "hasan_rank",
+          "importance": 50
+        },
+        {
+          "feature": "kalman_var_sacks",
+          "importance": 49
+        },
+        {
+          "feature": "nfl_lg_turnovers_pg",
+          "importance": 45
+        },
+        {
+          "feature": "career_team_off_explosiveness_mean",
+          "importance": 41
+        },
+        {
+          "feature": "career_team_off_stuff_rate_mean",
+          "importance": 40
+        },
+        {
+          "feature": "team_sp_overall",
+          "importance": 39
+        },
+        {
+          "feature": "combine_bench",
+          "importance": 39
+        },
+        {
+          "feature": "nfl_lg_pass_att_pg",
+          "importance": 38
+        },
+        {
+          "feature": "pff_total_pressures_mean",
+          "importance": 38
+        },
+        {
+          "feature": "nfl_lg_pass_yards_pg",
+          "importance": 37
+        },
+        {
+          "feature": "recruit_rank_position",
+          "importance": 35
+        }
+      ]
+    },
+    "DL_impact": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.0016531448181116622,
+      "avg_best_iter": 38,
+      "params_source": "tuned",
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.0008912575663602798,
+      "holdout_spearman": 0.6937158061165893,
+      "n_full_train": 10387,
+      "quantile_alphas": [
+        "p10",
+        "p50",
+        "p90"
+      ],
+      "feature_importance_top20": [
+        {
+          "feature": "hasan_rank",
+          "importance": 38
+        },
+        {
+          "feature": "combine_wt_z",
+          "importance": 35
+        },
+        {
+          "feature": "combine_forty_z",
+          "importance": 20
+        },
+        {
+          "feature": "combine_shuttle_z",
+          "importance": 18
+        },
+        {
+          "feature": "combine_cone",
+          "importance": 16
+        },
+        {
+          "feature": "combine_broad_jump_z",
+          "importance": 15
+        },
+        {
+          "feature": "combine_hand",
+          "importance": 15
+        },
+        {
+          "feature": "combine_vertical_z",
+          "importance": 14
+        },
+        {
+          "feature": "combine_bench",
+          "importance": 13
+        },
+        {
+          "feature": "combine_ht_z",
+          "importance": 11
+        },
+        {
+          "feature": "pff_grades_run_defense_mean",
+          "importance": 10
+        },
+        {
+          "feature": "team_sp_overall",
+          "importance": 8
+        },
+        {
+          "feature": "pff_grades_run_defense_last",
+          "importance": 5
+        },
+        {
+          "feature": "pff_grades_defense_last",
+          "importance": 5
+        },
+        {
+          "feature": "career_team_def_ppa_mean",
+          "importance": 5
+        },
+        {
+          "feature": "age_at_draft",
+          "importance": 4
+        },
+        {
+          "feature": "pff_grades_tackle_peak",
+          "importance": 4
+        },
+        {
+          "feature": "recruit_rank_national",
+          "importance": 3
+        },
+        {
+          "feature": "height_in",
+          "importance": 3
+        },
+        {
+          "feature": "pff_grades_tackle_mean",
+          "importance": 3
+        }
+      ]
+    },
+    "DL_impact_wav": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.011088710658338469,
+      "avg_best_iter": 76,
+      "params_source": "tuned",
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.008024517669021755,
+      "holdout_spearman": 0.38798127587331915,
+      "n_full_train": 10387,
+      "feature_importance_top20": [
+        {
+          "feature": "hasan_rank",
+          "importance": 166
+        },
+        {
+          "feature": "combine_wt_z",
+          "importance": 138
+        },
+        {
+          "feature": "combine_forty_z",
+          "importance": 115
+        },
+        {
+          "feature": "combine_vertical_z",
+          "importance": 100
+        },
+        {
+          "feature": "combine_broad_jump_z",
+          "importance": 78
+        },
+        {
+          "feature": "combine_ht_z",
+          "importance": 73
+        },
+        {
+          "feature": "combine_bench",
+          "importance": 68
+        },
+        {
+          "feature": "combine_hand",
+          "importance": 59
+        },
+        {
+          "feature": "combine_shuttle_z",
+          "importance": 56
+        },
+        {
+          "feature": "pff_grades_run_defense_mean",
+          "importance": 48
+        },
+        {
+          "feature": "combine_arm",
+          "importance": 45
+        },
+        {
+          "feature": "team_sp_offense",
+          "importance": 43
+        },
+        {
+          "feature": "pff_grades_defense_last",
+          "importance": 41
+        },
+        {
+          "feature": "height_in",
+          "importance": 36
+        },
+        {
+          "feature": "team_sp_defense",
+          "importance": 30
+        },
+        {
+          "feature": "age_at_draft",
+          "importance": 28
+        },
+        {
+          "feature": "pff_grades_run_defense_last",
+          "importance": 27
+        },
+        {
+          "feature": "recruiting_composite",
+          "importance": 27
+        },
+        {
+          "feature": "combine_wingspan_z",
+          "importance": 26
+        },
+        {
+          "feature": "nfl_lg_completion_pct",
+          "importance": 26
+        }
+      ]
+    },
+    "LB_role": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.06489111781359871,
+      "avg_best_iter": 40,
+      "params_source": "tuned",
+      "cv_logloss": 0.0941145934168877,
+      "cv_auc": 0.9760643968204287,
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.027557164656578433,
+      "holdout_logloss": 0.05105208486864248,
+      "holdout_auc": 0.9989001189060642,
+      "holdout_spearman": 0.4218980309242539,
+      "n_full_train": 9469,
+      "feature_importance_top20": [
+        {
+          "feature": "age_at_draft",
+          "importance": 59
+        },
+        {
+          "feature": "height_in",
+          "importance": 17
+        },
+        {
+          "feature": "combine_forty_z",
+          "importance": 14
+        },
+        {
+          "feature": "hasan_rank",
+          "importance": 13
+        },
+        {
+          "feature": "combine_invited",
+          "importance": 13
+        },
+        {
+          "feature": "class_year_int",
+          "importance": 12
+        },
+        {
+          "feature": "combine_arm",
+          "importance": 11
+        },
+        {
+          "feature": "career_team_off_explosiveness_mean",
+          "importance": 9
+        },
+        {
+          "feature": "team_sp_overall",
+          "importance": 9
+        },
+        {
+          "feature": "combine_wt_z",
+          "importance": 9
+        },
+        {
+          "feature": "combine_ht_z",
+          "importance": 8
+        },
+        {
+          "feature": "combine_cone_z",
+          "importance": 8
+        },
+        {
+          "feature": "combine_shuttle_z",
+          "importance": 8
+        },
+        {
+          "feature": "nfl_lg_pts_pg",
+          "importance": 8
+        },
+        {
+          "feature": "pff_stop_percent_peak",
+          "importance": 7
+        },
+        {
+          "feature": "combine_vertical_z",
+          "importance": 7
+        },
+        {
+          "feature": "combine_broad_jump_z",
+          "importance": 7
+        },
+        {
+          "feature": "pff_grades_pass_rush_defense_last",
+          "importance": 6
+        },
+        {
+          "feature": "pff_snap_counts_defense_last",
+          "importance": 6
+        },
+        {
+          "feature": "pff_snap_counts_coverage_last",
+          "importance": 6
+        }
+      ]
+    },
+    "LB_impact": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.0011821568376990128,
+      "avg_best_iter": 7,
+      "params_source": "tuned",
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.0006152119817496586,
+      "holdout_spearman": 0.8303797751200537,
+      "n_full_train": 9469,
+      "quantile_alphas": [
+        "p10",
+        "p50",
+        "p90"
+      ],
+      "feature_importance_top20": [
+        {
+          "feature": "hasan_rank",
+          "importance": 6
+        },
+        {
+          "feature": "combine_forty_z",
+          "importance": 4
+        },
+        {
+          "feature": "combine_ht_z",
+          "importance": 3
+        },
+        {
+          "feature": "combine_wt_z",
+          "importance": 2
+        },
+        {
+          "feature": "pff_grades_defense_mean",
+          "importance": 2
+        },
+        {
+          "feature": "combine_broad_jump_z",
+          "importance": 1
+        },
+        {
+          "feature": "weight_lbs",
+          "importance": 1
+        },
+        {
+          "feature": "age_at_draft",
+          "importance": 1
+        },
+        {
+          "feature": "combine_arm",
+          "importance": 1
+        },
+        {
+          "feature": "kalman_mean_tackles",
+          "importance": 1
+        },
+        {
+          "feature": "combine_cone_z",
+          "importance": 1
+        },
+        {
+          "feature": "pff_man_grades_coverage_defense_mean",
+          "importance": 0
+        },
+        {
+          "feature": "pff_grades_coverage_defense_peak",
+          "importance": 0
+        },
+        {
+          "feature": "pff_grades_coverage_defense_mean",
+          "importance": 0
+        },
+        {
+          "feature": "pff_grades_pass_rush_defense_last",
+          "importance": 0
+        },
+        {
+          "feature": "pff_grades_pass_rush_defense_peak",
+          "importance": 0
+        },
+        {
+          "feature": "pff_grades_pass_rush_defense_mean",
+          "importance": 0
+        },
+        {
+          "feature": "pff_grades_defense_last",
+          "importance": 0
+        },
+        {
+          "feature": "pff_grades_defense_peak",
+          "importance": 0
+        },
+        {
+          "feature": "combine_shuttle_z",
+          "importance": 0
+        }
+      ]
+    },
+    "LB_impact_wav": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.014292636248237374,
+      "avg_best_iter": 12,
+      "params_source": "tuned",
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.006971067582734775,
+      "holdout_spearman": 0.3103753265938532,
+      "n_full_train": 9469,
+      "feature_importance_top20": [
+        {
+          "feature": "hasan_rank",
+          "importance": 16
+        },
+        {
+          "feature": "combine_vertical_z",
+          "importance": 12
+        },
+        {
+          "feature": "age_at_draft",
+          "importance": 9
+        },
+        {
+          "feature": "combine_wt_z",
+          "importance": 8
+        },
+        {
+          "feature": "combine_ht_z",
+          "importance": 7
+        },
+        {
+          "feature": "kalman_mean_ints",
+          "importance": 7
+        },
+        {
+          "feature": "combine_bench_z",
+          "importance": 6
+        },
+        {
+          "feature": "ewma_ints",
+          "importance": 6
+        },
+        {
+          "feature": "combine_forty_z",
+          "importance": 5
+        },
+        {
+          "feature": "combine_broad_jump_z",
+          "importance": 5
+        },
+        {
+          "feature": "combine_cone_z",
+          "importance": 5
+        },
+        {
+          "feature": "pff_snap_counts_coverage_mean",
+          "importance": 4
+        },
+        {
+          "feature": "pff_grades_pass_rush_defense_last",
+          "importance": 3
+        },
+        {
+          "feature": "pff_man_zone_coverage_grade_delta_last",
+          "importance": 3
+        },
+        {
+          "feature": "recruit_rank_position",
+          "importance": 3
+        },
+        {
+          "feature": "career_team_def_stuff_rate_mean",
+          "importance": 3
+        },
+        {
+          "feature": "pff_tackles_for_loss_peak",
+          "importance": 3
+        },
+        {
+          "feature": "kalman_var_ints",
+          "importance": 3
+        },
+        {
+          "feature": "pff_forced_incompletion_rate_last",
+          "importance": 3
+        },
+        {
+          "feature": "combine_hand_z",
+          "importance": 3
+        }
+      ]
+    },
+    "DB_role": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.06719967130639946,
+      "avg_best_iter": 7,
+      "params_source": "tuned",
+      "cv_logloss": 0.10256162300860645,
+      "cv_auc": 0.9631623843373615,
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.02977782785322348,
+      "holdout_logloss": 0.057557151330600166,
+      "holdout_auc": 0.9948903937874526,
+      "holdout_spearman": 0.46586736054249794,
+      "n_full_train": 12622,
+      "feature_importance_top20": [
+        {
+          "feature": "age_at_draft",
+          "importance": 23
+        },
+        {
+          "feature": "nfl_lg_pass_att_pg",
+          "importance": 10
+        },
+        {
+          "feature": "combine_invited",
+          "importance": 6
+        },
+        {
+          "feature": "nfl_lg_pass_yards_pg",
+          "importance": 5
+        },
+        {
+          "feature": "class_year_int",
+          "importance": 5
+        },
+        {
+          "feature": "pff_snap_counts_defense_last",
+          "importance": 3
+        },
+        {
+          "feature": "ewma_var_ints",
+          "importance": 3
+        },
+        {
+          "feature": "combine_forty_z",
+          "importance": 3
+        },
+        {
+          "feature": "ewma_ints",
+          "importance": 2
+        },
+        {
+          "feature": "ewma_yoy_ints",
+          "importance": 2
+        },
+        {
+          "feature": "team_sp_overall",
+          "importance": 2
+        },
+        {
+          "feature": "career_team_off_explosiveness_mean",
+          "importance": 2
+        },
+        {
+          "feature": "career_team_def_success_rate_mean",
+          "importance": 2
+        },
+        {
+          "feature": "hasan_rank",
+          "importance": 2
+        },
+        {
+          "feature": "combine_bench_z",
+          "importance": 2
+        },
+        {
+          "feature": "combine_broad_jump_z",
+          "importance": 2
+        },
+        {
+          "feature": "pff_grades_defense_peak",
+          "importance": 1
+        },
+        {
+          "feature": "career_team_off_success_rate_mean",
+          "importance": 1
+        },
+        {
+          "feature": "pff_snap_counts_corner_mean",
+          "importance": 1
+        },
+        {
+          "feature": "pff_snap_counts_defense_peak",
+          "importance": 1
+        }
+      ]
+    },
+    "DB_impact": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.0012961154226528596,
+      "avg_best_iter": 244,
+      "params_source": "tuned",
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.0006667361883857305,
+      "holdout_spearman": 0.558765552010854,
+      "n_full_train": 12622,
+      "quantile_alphas": [
+        "p10",
+        "p50",
+        "p90"
+      ],
+      "feature_importance_top20": [
+        {
+          "feature": "hasan_rank",
+          "importance": 165
+        },
+        {
+          "feature": "combine_forty_z",
+          "importance": 131
+        },
+        {
+          "feature": "combine_wt_z",
+          "importance": 98
+        },
+        {
+          "feature": "kalman_var_ints",
+          "importance": 93
+        },
+        {
+          "feature": "combine_ht_z",
+          "importance": 69
+        },
+        {
+          "feature": "combine_broad_jump_z",
+          "importance": 64
+        },
+        {
+          "feature": "combine_hand_z",
+          "importance": 60
+        },
+        {
+          "feature": "combine_bench_z",
+          "importance": 56
+        },
+        {
+          "feature": "age_at_draft",
+          "importance": 50
+        },
+        {
+          "feature": "combine_shuttle",
+          "importance": 48
+        },
+        {
+          "feature": "team_sp_defense",
+          "importance": 43
+        },
+        {
+          "feature": "recruit_rank_national",
+          "importance": 39
+        },
+        {
+          "feature": "pff_grades_defense_peak",
+          "importance": 38
+        },
+        {
+          "feature": "ewma_var_ints",
+          "importance": 38
+        },
+        {
+          "feature": "combine_invited",
+          "importance": 35
+        },
+        {
+          "feature": "combine_vertical_z",
+          "importance": 33
+        },
+        {
+          "feature": "combine_cone",
+          "importance": 33
+        },
+        {
+          "feature": "combine_arm",
+          "importance": 33
+        },
+        {
+          "feature": "pff_grades_coverage_defense_peak",
+          "importance": 30
+        },
+        {
+          "feature": "pff_grades_defense_last",
+          "importance": 28
+        }
+      ]
+    },
+    "DB_impact_wav": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.010188687775483088,
+      "avg_best_iter": 200,
+      "params_source": "tuned",
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.007672303196008972,
+      "holdout_spearman": 0.37389894917741046,
+      "n_full_train": 12622,
+      "feature_importance_top20": [
+        {
+          "feature": "hasan_rank",
+          "importance": 357
+        },
+        {
+          "feature": "combine_forty_z",
+          "importance": 233
+        },
+        {
+          "feature": "age_at_draft",
+          "importance": 216
+        },
+        {
+          "feature": "kalman_var_ints",
+          "importance": 214
+        },
+        {
+          "feature": "team_sp_defense",
+          "importance": 158
+        },
+        {
+          "feature": "combine_vertical_z",
+          "importance": 155
+        },
+        {
+          "feature": "combine_wt_z",
+          "importance": 154
+        },
+        {
+          "feature": "combine_ht_z",
+          "importance": 141
+        },
+        {
+          "feature": "combine_hand_z",
+          "importance": 134
+        },
+        {
+          "feature": "combine_broad_jump_z",
+          "importance": 125
+        },
+        {
+          "feature": "ewma_yoy_ints",
+          "importance": 124
+        },
+        {
+          "feature": "height_in",
+          "importance": 120
+        },
+        {
+          "feature": "kalman_yoy_ints",
+          "importance": 119
+        },
+        {
+          "feature": "pff_grades_defense_last",
+          "importance": 99
+        },
+        {
+          "feature": "combine_invited",
+          "importance": 94
+        },
+        {
+          "feature": "combine_bench_z",
+          "importance": 75
+        },
+        {
+          "feature": "combine_shuttle",
+          "importance": 65
+        },
+        {
+          "feature": "kalman_mean_ints",
+          "importance": 60
+        },
+        {
+          "feature": "career_team_def_stuff_rate_mean",
+          "importance": 59
+        },
+        {
+          "feature": "combine_arm",
+          "importance": 56
+        }
+      ]
+    },
+    "K_role": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.046224037894604685,
+      "avg_best_iter": 9,
+      "params_source": "tuned",
+      "cv_logloss": 0.06278683769862158,
+      "cv_auc": 0.9797848140389537,
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.03696238886192802,
+      "holdout_logloss": 0.05191058511878476,
+      "holdout_auc": 0.9916488983653162,
+      "holdout_spearman": 0.31574176605395476,
+      "n_full_train": 2168,
+      "feature_importance_top20": [
+        {
+          "feature": "kalman_mean_fg_att",
+          "importance": 6
+        },
+        {
+          "feature": "ewma_fg_att",
+          "importance": 5
+        },
+        {
+          "feature": "nfl_lg_rush_yards_pg",
+          "importance": 4
+        },
+        {
+          "feature": "ewma_yoy_fg_att",
+          "importance": 4
+        },
+        {
+          "feature": "ewma_yoy_xp_att",
+          "importance": 4
+        },
+        {
+          "feature": "kalman_yoy_fg_made",
+          "importance": 4
+        },
+        {
+          "feature": "age_at_draft",
+          "importance": 4
+        },
+        {
+          "feature": "combine_invited",
+          "importance": 4
+        },
+        {
+          "feature": "ewma_var_kicking_pts",
+          "importance": 3
+        },
+        {
+          "feature": "kalman_yoy_xp_pct",
+          "importance": 3
+        },
+        {
+          "feature": "ewma_xp_pct",
+          "importance": 3
+        },
+        {
+          "feature": "pff_pat_attempts_last",
+          "importance": 3
+        },
+        {
+          "feature": "nfl_lg_pass_att_pg",
+          "importance": 3
+        },
+        {
+          "feature": "nfl_lg_pass_yards_pg",
+          "importance": 3
+        },
+        {
+          "feature": "combine_ht_z",
+          "importance": 3
+        },
+        {
+          "feature": "kalman_var_fg_att",
+          "importance": 3
+        },
+        {
+          "feature": "ewma_yoy_fg_made",
+          "importance": 3
+        },
+        {
+          "feature": "team_sp_defense",
+          "importance": 2
+        },
+        {
+          "feature": "career_team_off_explosiveness_mean",
+          "importance": 2
+        },
+        {
+          "feature": "team_sp_overall",
+          "importance": 2
+        }
+      ]
+    },
+    "K_impact": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.0006164083495855756,
+      "avg_best_iter": 1,
+      "params_source": "tuned",
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.00035256007985489345,
+      "n_full_train": 2168,
+      "quantile_alphas": [
+        "p10",
+        "p50",
+        "p90"
+      ],
+      "feature_importance_top20": [
+        {
+          "feature": "hasan_rank",
+          "importance": 0
+        },
+        {
+          "feature": "team_sp_offense",
+          "importance": 0
+        },
+        {
+          "feature": "ewma_var_xp_pct",
+          "importance": 0
+        },
+        {
+          "feature": "kalman_yoy_xp_pct",
+          "importance": 0
+        },
+        {
+          "feature": "ewma_yoy_xp_pct",
+          "importance": 0
+        },
+        {
+          "feature": "kalman_mean_kicking_pts",
+          "importance": 0
+        },
+        {
+          "feature": "kalman_var_kicking_pts",
+          "importance": 0
+        },
+        {
+          "feature": "ewma_kicking_pts",
+          "importance": 0
+        },
+        {
+          "feature": "ewma_var_kicking_pts",
+          "importance": 0
+        },
+        {
+          "feature": "kalman_yoy_kicking_pts",
+          "importance": 0
+        },
+        {
+          "feature": "ewma_yoy_kicking_pts",
+          "importance": 0
+        },
+        {
+          "feature": "height_in",
+          "importance": 0
+        },
+        {
+          "feature": "weight_lbs",
+          "importance": 0
+        },
+        {
+          "feature": "class_year_int",
+          "importance": 0
+        },
+        {
+          "feature": "conference_tier",
+          "importance": 0
+        },
+        {
+          "feature": "team_sp_defense",
+          "importance": 0
+        },
+        {
+          "feature": "kalman_var_xp_pct",
+          "importance": 0
+        },
+        {
+          "feature": "team_sp_overall",
+          "importance": 0
+        },
+        {
+          "feature": "career_team_off_ppa_mean",
+          "importance": 0
+        },
+        {
+          "feature": "career_team_off_success_rate_mean",
+          "importance": 0
+        }
+      ]
+    },
+    "K_impact_wav": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.0035189367006575197,
+      "avg_best_iter": 72,
+      "params_source": "tuned",
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.002358338343131981,
+      "holdout_spearman": 0.3001860694524572,
+      "n_full_train": 2168,
+      "feature_importance_top20": [
+        {
+          "feature": "height_in",
+          "importance": 46
+        },
+        {
+          "feature": "combine_invited",
+          "importance": 43
+        },
+        {
+          "feature": "nfl_lg_pass_yards_pg",
+          "importance": 42
+        },
+        {
+          "feature": "nfl_lg_pass_td_pg",
+          "importance": 30
+        },
+        {
+          "feature": "recruit_rank_national",
+          "importance": 26
+        },
+        {
+          "feature": "kalman_yoy_xp_att",
+          "importance": 22
+        },
+        {
+          "feature": "ewma_var_xp_pct",
+          "importance": 22
+        },
+        {
+          "feature": "kalman_yoy_kicking_pts",
+          "importance": 18
+        },
+        {
+          "feature": "combine_ht_z",
+          "importance": 15
+        },
+        {
+          "feature": "kalman_mean_fg_made",
+          "importance": 15
+        },
+        {
+          "feature": "ewma_yoy_xp_pct",
+          "importance": 15
+        },
+        {
+          "feature": "combine_wt_z",
+          "importance": 15
+        },
+        {
+          "feature": "pff_pat_percent_mean",
+          "importance": 12
+        },
+        {
+          "feature": "pff_total_percent_mean",
+          "importance": 12
+        },
+        {
+          "feature": "ewma_yoy_fg_made",
+          "importance": 12
+        },
+        {
+          "feature": "ewma_var_fg_att",
+          "importance": 11
+        },
+        {
+          "feature": "ewma_yoy_xp_att",
+          "importance": 10
+        },
+        {
+          "feature": "kalman_var_xp_att",
+          "importance": 9
+        },
+        {
+          "feature": "kalman_mean_fg_pct",
+          "importance": 8
+        },
+        {
+          "feature": "kalman_var_fg_att",
+          "importance": 8
+        }
+      ]
+    },
+    "P_role": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.058736527221799714,
+      "avg_best_iter": 277,
+      "params_source": "tuned",
+      "cv_logloss": 0.08261069473050671,
+      "cv_auc": 0.980875438713061,
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.03606605638648057,
+      "holdout_logloss": 0.05586288659115908,
+      "holdout_auc": 0.9800453514739229,
+      "holdout_spearman": 0.3077359284304793,
+      "n_full_train": 1244,
+      "feature_importance_top20": [
+        {
+          "feature": "age_at_draft",
+          "importance": 335
+        },
+        {
+          "feature": "pff_grades_punter_last",
+          "importance": 119
+        },
+        {
+          "feature": "kalman_yoy_net_punt_yards",
+          "importance": 112
+        },
+        {
+          "feature": "team_sp_defense",
+          "importance": 100
+        },
+        {
+          "feature": "kalman_var_punts",
+          "importance": 90
+        },
+        {
+          "feature": "career_team_off_ppa_mean",
+          "importance": 80
+        },
+        {
+          "feature": "pff_total_hangtime_mean",
+          "importance": 76
+        },
+        {
+          "feature": "career_team_def_stuff_rate_mean",
+          "importance": 70
+        },
+        {
+          "feature": "ewma_yoy_net_punt_yards",
+          "importance": 68
+        },
+        {
+          "feature": "pff_average_net_yards_last",
+          "importance": 64
+        },
+        {
+          "feature": "combine_wt_z",
+          "importance": 62
+        },
+        {
+          "feature": "pff_touchbacks_mean",
+          "importance": 60
+        },
+        {
+          "feature": "height_in",
+          "importance": 54
+        },
+        {
+          "feature": "team_sp_overall",
+          "importance": 52
+        },
+        {
+          "feature": "class_year_int",
+          "importance": 52
+        },
+        {
+          "feature": "pff_average_yards_per_attempt_mean",
+          "importance": 51
+        },
+        {
+          "feature": "combine_ht_z",
+          "importance": 48
+        },
+        {
+          "feature": "kalman_var_net_punt_yards",
+          "importance": 46
+        },
+        {
+          "feature": "ewma_punt_yards",
+          "importance": 46
+        },
+        {
+          "feature": "nfl_lg_pts_pg",
+          "importance": 44
+        }
+      ]
+    },
+    "P_impact": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.0007886038213080021,
+      "avg_best_iter": 9,
+      "params_source": "tuned",
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.0003723173602318774,
+      "holdout_spearman": 0.6858778893615965,
+      "n_full_train": 1244,
+      "quantile_alphas": [
+        "p10",
+        "p50",
+        "p90"
+      ],
+      "feature_importance_top20": [
+        {
+          "feature": "age_at_draft",
+          "importance": 3
+        },
+        {
+          "feature": "combine_ht_z",
+          "importance": 3
+        },
+        {
+          "feature": "combine_wt_z",
+          "importance": 1
+        },
+        {
+          "feature": "combine_forty_z",
+          "importance": 1
+        },
+        {
+          "feature": "combine_invited",
+          "importance": 1
+        },
+        {
+          "feature": "recruit_rank_national",
+          "importance": 0
+        },
+        {
+          "feature": "career_team_off_ppa_mean",
+          "importance": 0
+        },
+        {
+          "feature": "career_team_off_success_rate_mean",
+          "importance": 0
+        },
+        {
+          "feature": "career_team_off_explosiveness_mean",
+          "importance": 0
+        },
+        {
+          "feature": "career_team_off_stuff_rate_mean",
+          "importance": 0
+        },
+        {
+          "feature": "career_team_def_ppa_mean",
+          "importance": 0
+        },
+        {
+          "feature": "career_team_def_success_rate_mean",
+          "importance": 0
+        },
+        {
+          "feature": "career_team_def_stuff_rate_mean",
+          "importance": 0
+        },
+        {
+          "feature": "recruiting_stars",
+          "importance": 0
+        },
+        {
+          "feature": "recruiting_composite",
+          "importance": 0
+        },
+        {
+          "feature": "hasan_rank",
+          "importance": 0
+        },
+        {
+          "feature": "recruit_rank_position",
+          "importance": 0
+        },
+        {
+          "feature": "team_sp_defense",
+          "importance": 0
+        },
+        {
+          "feature": "n_transfers_career",
+          "importance": 0
+        },
+        {
+          "feature": "n_games",
+          "importance": 0
+        }
+      ]
+    },
+    "P_impact_wav": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.0042497059859810775,
+      "avg_best_iter": 72,
+      "params_source": "tuned",
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.0029443606114813235,
+      "holdout_spearman": 0.40748037730589126,
+      "n_full_train": 1244,
+      "feature_importance_top20": [
+        {
+          "feature": "pff_average_net_yards_peak",
+          "importance": 50
+        },
+        {
+          "feature": "combine_ht_z",
+          "importance": 43
+        },
+        {
+          "feature": "ewma_punt_yards",
+          "importance": 25
+        },
+        {
+          "feature": "age_at_draft",
+          "importance": 21
+        },
+        {
+          "feature": "combine_invited",
+          "importance": 20
+        },
+        {
+          "feature": "nfl_lg_pass_att_pg",
+          "importance": 14
+        },
+        {
+          "feature": "kalman_var_net_punt_yards",
+          "importance": 11
+        },
+        {
+          "feature": "pff_average_yards_per_attempt_peak",
+          "importance": 9
+        },
+        {
+          "feature": "combine_wt_z",
+          "importance": 9
+        },
+        {
+          "feature": "nfl_lg_rush_att_pg",
+          "importance": 5
+        },
+        {
+          "feature": "height_in",
+          "importance": 2
+        },
+        {
+          "feature": "kalman_var_punts",
+          "importance": 2
+        },
+        {
+          "feature": "kalman_var_punt_yards",
+          "importance": 2
+        },
+        {
+          "feature": "ewma_var_punt_yards",
+          "importance": 1
+        },
+        {
+          "feature": "pff_inside_twenties_last",
+          "importance": 1
+        },
+        {
+          "feature": "recruiting_composite",
+          "importance": 0
+        },
+        {
+          "feature": "hasan_rank",
+          "importance": 0
+        },
+        {
+          "feature": "recruiting_stars",
+          "importance": 0
+        },
+        {
+          "feature": "career_team_def_stuff_rate_mean",
+          "importance": 0
+        },
+        {
+          "feature": "career_team_def_ppa_mean",
+          "importance": 0
+        }
+      ]
+    }
+  }
+}

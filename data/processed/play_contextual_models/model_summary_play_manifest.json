@@ -1,0 +1,18 @@
+{
+  "_manifest_version": 2,
+  "_written_at_utc": "2026-11-01T03:45:28+00:00",
+  "_mode_used": "default",
+  "_step_name": "04p_play_contextual_models",
+  "play_context_features": "0fbab825611e646e3e00b2038271a7cfe42e231f",
+  "lgbm_params": "33781c5767533216ca153486691ec33a5891521f",
+  "play_type_stat_elig": "29710c0fb998e699fe1d8b87b6a2c73aa2090196",
+  "bridge_file": {
+    "size_bytes": 391090,
+    "mtime_utc": "2026-11-01T03:33:37+00:00"
+  },
+  "player_plays_file": {
+    "size_bytes": 137511585,
+    "mtime_utc": "2026-07-20T03:33:02+00:00"
+  },
+  "n_stats_fitted": 24
+}

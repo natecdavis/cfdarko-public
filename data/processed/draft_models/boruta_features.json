@@ -1,0 +1,547 @@
+{
+  "QB/impact": {
+    "confirmed": [
+      "kalman_yoy_ppa_avg_passing",
+      "kalman_mean_play_mean_resid_rush",
+      "kalman_var_play_mean_resid_rush",
+      "combine_speed_score",
+      "pff_blitz_btt_rate_peak",
+      "combine_invited",
+      "combine_ht_z",
+      "hasan_rank"
+    ],
+    "tentative": [],
+    "rejected_count": 274,
+    "n_features_in": 282,
+    "n_features_after": 8,
+    "n_train_rows": 2891,
+    "boruta_train_end": 2021,
+    "max_iter": 100,
+    "percentile": 100,
+    "alpha": 0.05
+  },
+  "QB/impact_wav": {
+    "confirmed": [
+      "kalman_mean_completion_pct",
+      "kalman_mean_play_mean_resid_rush",
+      "ewma_var_play_mean_resid_completion",
+      "ewma_var_play_mean_resid_pass_completion_outcome",
+      "ewma_var_play_total_resid_completion",
+      "ewma_var_play_total_resid_passing_touchdown_outcome",
+      "team_sp_offense",
+      "career_team_off_ppa_mean",
+      "career_team_second_level_yards_avg_mean",
+      "age_at_draft",
+      "combine_speed_score",
+      "pff_blitz_btt_rate_peak",
+      "nfl_lg_pass_yards_pg",
+      "nfl_lg_plays_pg",
+      "combine_invited",
+      "combine_broad_jump_z",
+      "hasan_rank"
+    ],
+    "tentative": [
+      "kalman_mean_rush_yards",
+      "nfl_lg_pass_att_pg"
+    ],
+    "rejected_count": 263,
+    "n_features_in": 282,
+    "n_features_after": 17,
+    "n_train_rows": 2801,
+    "boruta_train_end": 2021,
+    "max_iter": 100,
+    "percentile": 100,
+    "alpha": 0.05
+  },
+  "RB/impact": {
+    "confirmed": [
+      "ewma_rush_share",
+      "combine_speed_score",
+      "combine_invited",
+      "combine_forty_z",
+      "hasan_rank"
+    ],
+    "tentative": [],
+    "rejected_count": 284,
+    "n_features_in": 289,
+    "n_features_after": 5,
+    "n_train_rows": 5166,
+    "boruta_train_end": 2021,
+    "max_iter": 100,
+    "percentile": 100,
+    "alpha": 0.05
+  },
+  "RB/impact_wav": {
+    "confirmed": [
+      "ewma_var_rush_att",
+      "kalman_mean_rush_yards",
+      "kalman_mean_rush_tds",
+      "kalman_var_yards_per_carry",
+      "ewma_yoy_yards_per_carry",
+      "kalman_mean_rush_share",
+      "ewma_rush_share",
+      "ewma_rec_share",
+      "ewma_var_play_mean_resid_rush",
+      "team_sp_offense",
+      "age_at_draft",
+      "n_seasons",
+      "combine_speed_score",
+      "nfl_lg_turnovers_pg",
+      "combine_invited",
+      "combine_forty_z",
+      "combine_cone",
+      "hasan_rank"
+    ],
+    "tentative": [
+      "kalman_yoy_rec_yards",
+      "kalman_yoy_rush_share",
+      "ewma_var_play_total_resid_rush",
+      "team_sp_overall"
+    ],
+    "rejected_count": 267,
+    "n_features_in": 289,
+    "n_features_after": 18,
+    "n_train_rows": 5015,
+    "boruta_train_end": 2021,
+    "max_iter": 100,
+    "percentile": 100,
+    "alpha": 0.05
+  },
+  "WR/impact": {
+    "confirmed": [
+      "ewma_var_rec",
+      "ewma_rec_yards",
+      "kalman_yoy_rec_tds",
+      "ewma_var_rec_share",
+      "recruiting_composite",
+      "pff_zone_targeted_qb_rating_mean",
+      "combine_invited",
+      "combine_shuttle_z",
+      "hasan_rank"
+    ],
+    "tentative": [
+      "kalman_mean_rec_tds"
+    ],
+    "rejected_count": 225,
+    "n_features_in": 235,
+    "n_features_after": 9,
+    "n_train_rows": 9001,
+    "boruta_train_end": 2021,
+    "max_iter": 100,
+    "percentile": 100,
+    "alpha": 0.05
+  },
+  "WR/impact_wav": {
+    "confirmed": [
+      "ewma_rec",
+      "ewma_var_rec",
+      "ewma_rec_yards",
+      "ewma_rec_tds",
+      "kalman_var_ppa_avg",
+      "kalman_mean_rec_share",
+      "ewma_rec_share",
+      "ewma_var_rec_share",
+      "kalman_mean_play_total_resid_rush",
+      "recruiting_composite",
+      "recruit_rank_national",
+      "age_at_draft",
+      "n_seasons",
+      "pff_targeted_qb_rating_mean",
+      "pff_man_targeted_qb_rating_mean",
+      "pff_zone_targeted_qb_rating_mean",
+      "nfl_lg_turnovers_pg",
+      "combine_invited",
+      "combine_forty_z",
+      "hasan_rank"
+    ],
+    "tentative": [
+      "kalman_mean_rec_tds",
+      "kalman_var_play_mean_resid_receiving_touchdown_outcome"
+    ],
+    "rejected_count": 213,
+    "n_features_in": 235,
+    "n_features_after": 20,
+    "n_train_rows": 8749,
+    "boruta_train_end": 2021,
+    "max_iter": 100,
+    "percentile": 100,
+    "alpha": 0.05
+  },
+  "TE/impact": {
+    "confirmed": [
+      "ewma_rec_yards",
+      "ewma_yoy_rec_yards",
+      "kalman_mean_rec_tds",
+      "kalman_mean_rec_share",
+      "kalman_yoy_rec_share",
+      "combine_speed_score",
+      "combine_invited",
+      "hasan_rank"
+    ],
+    "tentative": [
+      "pff_grades_pass_block_last",
+      "combine_broad_jump_z"
+    ],
+    "rejected_count": 222,
+    "n_features_in": 232,
+    "n_features_after": 8,
+    "n_train_rows": 3697,
+    "boruta_train_end": 2021,
+    "max_iter": 100,
+    "percentile": 100,
+    "alpha": 0.05
+  },
+  "TE/impact_wav": {
+    "confirmed": [
+      "kalman_var_yards_per_rec",
+      "kalman_mean_rec_share",
+      "kalman_yoy_rec_share",
+      "combine_speed_score",
+      "combine_invited",
+      "combine_forty_z",
+      "hasan_rank"
+    ],
+    "tentative": [],
+    "rejected_count": 225,
+    "n_features_in": 232,
+    "n_features_after": 7,
+    "n_train_rows": 3590,
+    "boruta_train_end": 2021,
+    "max_iter": 100,
+    "percentile": 100,
+    "alpha": 0.05
+  },
+  "OL/impact": {
+    "confirmed": [
+      "career_team_off_explosiveness_mean",
+      "career_team_line_yards_avg_mean",
+      "career_team_second_level_yards_avg_mean",
+      "pff_grades_offense_last",
+      "combine_invited",
+      "combine_forty_z",
+      "combine_shuttle_z",
+      "combine_wt",
+      "hasan_rank"
+    ],
+    "tentative": [
+      "combine_speed_score",
+      "combine_broad_jump_z"
+    ],
+    "rejected_count": 140,
+    "n_features_in": 151,
+    "n_features_after": 9,
+    "n_train_rows": 11206,
+    "boruta_train_end": 2021,
+    "max_iter": 100,
+    "percentile": 100,
+    "alpha": 0.05
+  },
+  "OL/impact_wav": {
+    "confirmed": [
+      "team_sp_overall",
+      "career_team_off_explosiveness_mean",
+      "career_team_def_stuff_rate_mean",
+      "career_team_havoc_total_mean",
+      "career_team_havoc_db_mean",
+      "age_at_draft",
+      "pff_true_pass_set_pressures_allowed_rate_peak",
+      "nfl_lg_completion_pct",
+      "nfl_lg_turnovers_pg",
+      "combine_invited",
+      "combine_bench",
+      "hasan_rank"
+    ],
+    "tentative": [
+      "combine_speed_score",
+      "nfl_lg_rush_att_pg"
+    ],
+    "rejected_count": 137,
+    "n_features_in": 151,
+    "n_features_after": 12,
+    "n_train_rows": 11004,
+    "boruta_train_end": 2021,
+    "max_iter": 100,
+    "percentile": 100,
+    "alpha": 0.05
+  },
+  "DL/impact": {
+    "confirmed": [
+      "team_sp_offense",
+      "age_at_draft",
+      "combine_speed_score",
+      "combine_invited",
+      "combine_cone",
+      "hasan_rank"
+    ],
+    "tentative": [],
+    "rejected_count": 185,
+    "n_features_in": 191,
+    "n_features_after": 6,
+    "n_train_rows": 8708,
+    "boruta_train_end": 2021,
+    "max_iter": 100,
+    "percentile": 100,
+    "alpha": 0.05
+  },
+  "DL/impact_wav": {
+    "confirmed": [
+      "career_team_def_ppa_mean",
+      "age_at_draft",
+      "combine_speed_score",
+      "nfl_lg_pass_att_pg",
+      "combine_invited",
+      "combine_wt_z",
+      "combine_bench",
+      "combine_hand",
+      "hasan_rank"
+    ],
+    "tentative": [
+      "pff_grades_defense_last",
+      "pff_grades_run_defense_last"
+    ],
+    "rejected_count": 180,
+    "n_features_in": 191,
+    "n_features_after": 9,
+    "n_train_rows": 8534,
+    "boruta_train_end": 2021,
+    "max_iter": 100,
+    "percentile": 100,
+    "alpha": 0.05
+  },
+  "EDGE/impact": {
+    "confirmed": [
+      "combine_speed_score",
+      "pff_grades_defense_peak",
+      "pff_grades_run_defense_last",
+      "combine_invited",
+      "combine_broad_jump_z",
+      "combine_forty_z",
+      "combine_ht_z",
+      "combine_shuttle_z",
+      "hasan_rank"
+    ],
+    "tentative": [
+      "pff_grades_defense_mean"
+    ],
+    "rejected_count": 181,
+    "n_features_in": 191,
+    "n_features_after": 9,
+    "n_train_rows": 1519,
+    "boruta_train_end": 2021,
+    "max_iter": 100,
+    "percentile": 100,
+    "alpha": 0.05
+  },
+  "EDGE/impact_wav": {
+    "confirmed": [
+      "kalman_var_ints",
+      "combine_speed_score",
+      "pff_grades_defense_peak",
+      "pff_grades_defense_last",
+      "pff_snap_counts_defense_mean",
+      "nfl_lg_pass_td_pg",
+      "nfl_lg_turnovers_pg",
+      "combine_invited",
+      "combine_forty_z",
+      "combine_shuttle_z",
+      "hasan_rank"
+    ],
+    "tentative": [
+      "kalman_mean_passes_defended",
+      "ewma_var_play_mean_resid_sack",
+      "ewma_var_play_total_resid_sack",
+      "recruiting_composite",
+      "pff_grades_pass_rush_defense_peak",
+      "nfl_lg_pass_yards_pg",
+      "nfl_lg_rush_att_pg",
+      "combine_ht_z"
+    ],
+    "rejected_count": 172,
+    "n_features_in": 191,
+    "n_features_after": 11,
+    "n_train_rows": 1407,
+    "boruta_train_end": 2021,
+    "max_iter": 100,
+    "percentile": 100,
+    "alpha": 0.05
+  },
+  "LB/impact": {
+    "confirmed": [
+      "career_team_rushing_power_success_mean",
+      "combine_speed_score",
+      "combine_invited",
+      "combine_broad_jump_z",
+      "combine_forty_z",
+      "combine_hand_z",
+      "combine_arm",
+      "hasan_rank"
+    ],
+    "tentative": [],
+    "rejected_count": 218,
+    "n_features_in": 226,
+    "n_features_after": 8,
+    "n_train_rows": 7765,
+    "boruta_train_end": 2021,
+    "max_iter": 100,
+    "percentile": 100,
+    "alpha": 0.05
+  },
+  "LB/impact_wav": {
+    "confirmed": [
+      "career_team_def_stuff_rate_mean",
+      "career_team_rushing_power_success_mean",
+      "age_at_draft",
+      "combine_speed_score",
+      "nfl_lg_completion_pct",
+      "combine_invited",
+      "combine_forty_z",
+      "hasan_rank"
+    ],
+    "tentative": [],
+    "rejected_count": 218,
+    "n_features_in": 226,
+    "n_features_after": 8,
+    "n_train_rows": 7608,
+    "boruta_train_end": 2021,
+    "max_iter": 100,
+    "percentile": 100,
+    "alpha": 0.05
+  },
+  "DB/impact": {
+    "confirmed": [
+      "kalman_var_ints",
+      "career_team_off_explosiveness_mean",
+      "combine_invited",
+      "combine_forty_z",
+      "hasan_rank"
+    ],
+    "tentative": [],
+    "rejected_count": 206,
+    "n_features_in": 211,
+    "n_features_after": 5,
+    "n_train_rows": 10981,
+    "boruta_train_end": 2021,
+    "max_iter": 100,
+    "percentile": 100,
+    "alpha": 0.05
+  },
+  "DB/impact_wav": {
+    "confirmed": [
+      "kalman_var_ints",
+      "age_at_draft",
+      "nfl_lg_pass_yards_pg",
+      "nfl_lg_rush_att_pg",
+      "combine_invited",
+      "combine_forty_z",
+      "hasan_rank"
+    ],
+    "tentative": [],
+    "rejected_count": 204,
+    "n_features_in": 211,
+    "n_features_after": 7,
+    "n_train_rows": 10670,
+    "boruta_train_end": 2021,
+    "max_iter": 100,
+    "percentile": 100,
+    "alpha": 0.05
+  },
+  "K/impact": {
+    "confirmed": [
+      "age_at_draft",
+      "nfl_lg_pass_yards_pg",
+      "combine_ht_z"
+    ],
+    "tentative": [
+      "nfl_lg_rush_att_pg"
+    ],
+    "rejected_count": 167,
+    "n_features_in": 173,
+    "n_features_after": 3,
+    "n_train_rows": 1779,
+    "boruta_train_end": 2021,
+    "max_iter": 100,
+    "percentile": 100,
+    "alpha": 0.05
+  },
+  "K/impact_wav": {
+    "confirmed": [
+      "kalman_var_fg_made",
+      "kalman_var_xp_att",
+      "kalman_var_xp_made",
+      "kalman_var_play_mean_resid_field_goal_attempt",
+      "kalman_var_play_total_resid_field_goal_attempt",
+      "career_team_def_stuff_rate_mean",
+      "recruit_rank_position",
+      "age_at_draft",
+      "pff_fifty_attempts_last",
+      "nfl_lg_pass_yards_pg",
+      "nfl_lg_rush_att_pg",
+      "nfl_lg_turnovers_pg",
+      "combine_invited",
+      "combine_forty_z",
+      "combine_ht_z"
+    ],
+    "tentative": [
+      "ewma_var_play_total_resid_field_goal_made",
+      "nfl_lg_pass_att_pg",
+      "nfl_lg_completion_pct",
+      "nfl_lg_pts_pg"
+    ],
+    "rejected_count": 152,
+    "n_features_in": 173,
+    "n_features_after": 15,
+    "n_train_rows": 1737,
+    "boruta_train_end": 2021,
+    "max_iter": 100,
+    "percentile": 100,
+    "alpha": 0.05
+  },
+  "P/impact": {
+    "confirmed": [
+      "career_team_def_stuff_rate_mean",
+      "age_at_draft",
+      "pff_grades_punter_last",
+      "nfl_lg_completion_pct",
+      "nfl_lg_plays_pg",
+      "combine_forty_z"
+    ],
+    "tentative": [
+      "pff_grades_punter_peak",
+      "nfl_lg_rush_att_pg"
+    ],
+    "rejected_count": 107,
+    "n_features_in": 119,
+    "n_features_after": 6,
+    "n_train_rows": 1017,
+    "boruta_train_end": 2021,
+    "max_iter": 100,
+    "percentile": 100,
+    "alpha": 0.05
+  },
+  "P/impact_wav": {
+    "confirmed": [
+      "team_sp_defense",
+      "age_at_draft",
+      "pff_grades_punter_peak",
+      "pff_grades_punter_last",
+      "combine_forty_z",
+      "combine_wingspan_z"
+    ],
+    "tentative": [],
+    "rejected_count": 109,
+    "n_features_in": 119,
+    "n_features_after": 6,
+    "n_train_rows": 993,
+    "boruta_train_end": 2021,
+    "max_iter": 100,
+    "percentile": 100,
+    "alpha": 0.05
+  },
+  "_meta": {
+    "snapshot_n_rows": 136733,
+    "boruta_train_end": 2021,
+    "max_iter": 100,
+    "percentile": 100,
+    "alpha": 0.05
+  }
+}

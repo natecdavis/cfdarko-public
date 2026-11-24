@@ -1,0 +1,19 @@
+{
+  "_tuning_mode": "fresh",
+  "_tuning_step": "08c_calibrate_draft_scores",
+  "_tuning_stamped_at_utc": "2026-11-01T04:03:07+00:00",
+  "impact_apy_p90_offsets": {
+    "QB": 0.0,
+    "RB": 0.0,
+    "WR": 0.0,
+    "TE": 0.0,
+    "OL": 0.0,
+    "DL": 0.0,
+    "EDGE": 0.0,
+    "LB": 0.0,
+    "DB": 0.0,
+    "K": 0.0,
+    "P": 0.0
+  },
+  "alpha": 0.9
+}

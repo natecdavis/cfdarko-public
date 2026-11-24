@@ -1,0 +1,165 @@
+{
+  "_manifest_version": 2,
+  "_written_at_utc": "2026-05-08T14:49:13+00:00",
+  "_mode_used": "fresh",
+  "_step_name": "08_draft_models",
+  "by_key": {
+    "QB/role": {
+      "candidate_cols_hash": "99b202ba6452417bca06ec96bc731bd3c3988693",
+      "n_state_space_in": 156,
+      "n_selected": 40
+    },
+    "QB/impact": {
+      "candidate_cols_hash": "99b202ba6452417bca06ec96bc731bd3c3988693",
+      "n_state_space_in": 156,
+      "n_selected": 40
+    },
+    "QB/impact_wav": {
+      "candidate_cols_hash": "99b202ba6452417bca06ec96bc731bd3c3988693",
+      "n_state_space_in": 156,
+      "n_selected": 40
+    },
+    "RB/role": {
+      "candidate_cols_hash": "89af83d13e09dfae5b7346d684a323bc83238d9b",
+      "n_state_space_in": 168,
+      "n_selected": 40
+    },
+    "RB/impact": {
+      "candidate_cols_hash": "89af83d13e09dfae5b7346d684a323bc83238d9b",
+      "n_state_space_in": 168,
+      "n_selected": 40
+    },
+    "RB/impact_wav": {
+      "candidate_cols_hash": "89af83d13e09dfae5b7346d684a323bc83238d9b",
+      "n_state_space_in": 168,
+      "n_selected": 40
+    },
+    "WR/role": {
+      "candidate_cols_hash": "1a66fa0c88028587224ea954762cbce873eb1e0a",
+      "n_state_space_in": 168,
+      "n_selected": 40
+    },
+    "WR/impact": {
+      "candidate_cols_hash": "1a66fa0c88028587224ea954762cbce873eb1e0a",
+      "n_state_space_in": 168,
+      "n_selected": 40
+    },
+    "WR/impact_wav": {
+      "candidate_cols_hash": "1a66fa0c88028587224ea954762cbce873eb1e0a",
+      "n_state_space_in": 168,
+      "n_selected": 40
+    },
+    "TE/role": {
+      "candidate_cols_hash": "53a8d5bf66f8587c2d9e87decb61cc354efde18e",
+      "n_state_space_in": 138,
+      "n_selected": 40
+    },
+    "TE/impact": {
+      "candidate_cols_hash": "53a8d5bf66f8587c2d9e87decb61cc354efde18e",
+      "n_state_space_in": 138,
+      "n_selected": 40
+    },
+    "TE/impact_wav": {
+      "candidate_cols_hash": "53a8d5bf66f8587c2d9e87decb61cc354efde18e",
+      "n_state_space_in": 138,
+      "n_selected": 40
+    },
+    "OL/role": {
+      "candidate_cols_hash": "9f3d24179a2d799477bddab8df486143f03a9cf8",
+      "n_state_space_in": 120,
+      "n_selected": 40
+    },
+    "OL/impact": {
+      "candidate_cols_hash": "9f3d24179a2d799477bddab8df486143f03a9cf8",
+      "n_state_space_in": 120,
+      "n_selected": 40
+    },
+    "OL/impact_wav": {
+      "candidate_cols_hash": "9f3d24179a2d799477bddab8df486143f03a9cf8",
+      "n_state_space_in": 120,
+      "n_selected": 40
+    },
+    "DL/role": {
+      "candidate_cols_hash": "24a1872647ed6a0d44dac7918efce68ac002cba9",
+      "n_state_space_in": 108,
+      "n_selected": 40
+    },
+    "DL/impact": {
+      "candidate_cols_hash": "24a1872647ed6a0d44dac7918efce68ac002cba9",
+      "n_state_space_in": 108,
+      "n_selected": 40
+    },
+    "DL/impact_wav": {
+      "candidate_cols_hash": "24a1872647ed6a0d44dac7918efce68ac002cba9",
+      "n_state_space_in": 108,
+      "n_selected": 40
+    },
+    "LB/role": {
+      "candidate_cols_hash": "378b61c6b15259ba5183a17ee22f64e2bf68ebe5",
+      "n_state_space_in": 192,
+      "n_selected": 40
+    },
+    "LB/impact": {
+      "candidate_cols_hash": "378b61c6b15259ba5183a17ee22f64e2bf68ebe5",
+      "n_state_space_in": 192,
+      "n_selected": 40
+    },
+    "LB/impact_wav": {
+      "candidate_cols_hash": "378b61c6b15259ba5183a17ee22f64e2bf68ebe5",
+      "n_state_space_in": 192,
+      "n_selected": 40
+    },
+    "DB/role": {
+      "candidate_cols_hash": "5e6a82f4cba192e93e8d172f0e81efc4f398eaef",
+      "n_state_space_in": 180,
+      "n_selected": 40
+    },
+    "DB/impact": {
+      "candidate_cols_hash": "5e6a82f4cba192e93e8d172f0e81efc4f398eaef",
+      "n_state_space_in": 180,
+      "n_selected": 40
+    },
+    "DB/impact_wav": {
+      "candidate_cols_hash": "5e6a82f4cba192e93e8d172f0e81efc4f398eaef",
+      "n_state_space_in": 180,
+      "n_selected": 40
+    },
+    "K/role": {
+      "candidate_cols_hash": "22835499caf74776b943b7ec89a4d7cb049bd525",
+      "n_state_space_in": 48,
+      "n_selected": 40
+    },
+    "K/impact": {
+      "candidate_cols_hash": "22835499caf74776b943b7ec89a4d7cb049bd525",
+      "n_state_space_in": 48,
+      "n_selected": 40
+    },
+    "K/impact_wav": {
+      "candidate_cols_hash": "22835499caf74776b943b7ec89a4d7cb049bd525",
+      "n_state_space_in": 48,
+      "n_selected": 40
+    },
+    "P/role": {
+      "candidate_cols_hash": "dff72eb31266a0288e6299265da89272492ce8f9",
+      "n_state_space_in": 30,
+      "n_selected": 30
+    },
+    "P/impact": {
+      "candidate_cols_hash": "dff72eb31266a0288e6299265da89272492ce8f9",
+      "n_state_space_in": 30,
+      "n_selected": 30
+    },
+    "P/impact_wav": {
+      "candidate_cols_hash": "dff72eb31266a0288e6299265da89272492ce8f9",
+      "n_state_space_in": 30,
+      "n_selected": 30
+    }
+  },
+  "global_context": {
+    "snapshot_n_rows": 123893,
+    "mi_top_n": 40,
+    "mi_n_neighbors": 3,
+    "mi_random_state": 42
+  },
+  "n_keys": 30
+}

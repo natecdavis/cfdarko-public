@@ -1,0 +1,232 @@
+{
+  "_tuning_mode": "fresh",
+  "_tuning_step": "08c_calibrate_draft_scores",
+  "_tuning_stamped_at_utc": "2026-11-01T04:03:07+00:00",
+  "thresholds": {
+    "isotonic_min_n_positive": 100,
+    "platt_min_n_positive": 50
+  },
+  "skip_platt_fallback": false,
+  "by_head": {
+    "QB/impact_wav": {
+      "method": "platt_ridge",
+      "n": 2582,
+      "n_positive": 95,
+      "y_min": 0.0,
+      "y_max": 0.9166666666666666,
+      "feature_cols_hash": "a8e42e9e12d580089f40e14f950b4cc4cd927db7",
+      "raw": {
+        "bias": 0.004984277994736351,
+        "mae": 0.019898388326801183,
+        "brier": 0.003571149469913398,
+        "logloss": null
+      },
+      "cal": {
+        "bias": 0.0023861493938352038,
+        "mae": 0.015601323572100112,
+        "brier": 0.003299436092094741,
+        "logloss": null
+      }
+    },
+    "RB/impact_wav": {
+      "method": "isotonic",
+      "n": 4592,
+      "n_positive": 215,
+      "y_min": 0.0,
+      "y_max": 0.7226890756302521,
+      "feature_cols_hash": "bc3e5e60c7f41d36f0ea04a63efada12e9ef9e1e",
+      "raw": {
+        "bias": 0.005072401400106145,
+        "mae": 0.014544806706046106,
+        "brier": 0.002033907859371894,
+        "logloss": null
+      },
+      "cal": {
+        "bias": -1.4506398405380966e-19,
+        "mae": 0.009357872488505682,
+        "brier": 0.0017626920295032067,
+        "logloss": null
+      }
+    },
+    "WR/impact_wav": {
+      "method": "isotonic",
+      "n": 8082,
+      "n_positive": 292,
+      "y_min": 0.0,
+      "y_max": 0.7228915662650602,
+      "feature_cols_hash": "b4af6e5b4c671979586aeaeafa09838d72dfb786",
+      "raw": {
+        "bias": 0.0040579760641789855,
+        "mae": 0.010579828544328113,
+        "brier": 0.0012003843490468317,
+        "logloss": null
+      },
+      "cal": {
+        "bias": -5.494793489854771e-20,
+        "mae": 0.005922059187632733,
+        "brier": 0.0010114933615154482,
+        "logloss": null
+      }
+    },
+    "TE/impact_wav": {
+      "method": "isotonic",
+      "n": 3328,
+      "n_positive": 120,
+      "y_min": 0.0,
+      "y_max": 0.47474747474747475,
+      "feature_cols_hash": "eca1db9e1501a2db524d20490a2f3ca3b5a4da1c",
+      "raw": {
+        "bias": 0.0018113567620377967,
+        "mae": 0.006761287077146988,
+        "brier": 0.0006030454237490363,
+        "logloss": null
+      },
+      "cal": {
+        "bias": -1.0008020053712349e-19,
+        "mae": 0.004672700676628347,
+        "brier": 0.0005343522109147743,
+        "logloss": null
+      }
+    },
+    "OL/impact_wav": {
+      "method": "isotonic",
+      "n": 10382,
+      "n_positive": 396,
+      "y_min": 0.0,
+      "y_max": 0.7191011235955056,
+      "feature_cols_hash": "ed933ca8673d17e8a7e18c470e6a110d42242ad8",
+      "raw": {
+        "bias": 0.005824512737996923,
+        "mae": 0.011554590381351442,
+        "brier": 0.001853857524833567,
+        "logloss": null
+      },
+      "cal": {
+        "bias": -6.843987052206706e-19,
+        "mae": 0.00837930253837489,
+        "brier": 0.0015609479679795156,
+        "logloss": null
+      }
+    },
+    "DL/impact_wav": {
+      "method": "isotonic",
+      "n": 7946,
+      "n_positive": 326,
+      "y_min": 0.0,
+      "y_max": 0.7735849056603774,
+      "feature_cols_hash": "7c5c055b2453416c64c1939490b034e80f1d6b29",
+      "raw": {
+        "bias": 0.005437968232530893,
+        "mae": 0.011026383780249874,
+        "brier": 0.0014225461883405654,
+        "logloss": null
+      },
+      "cal": {
+        "bias": -1.1177679583439784e-18,
+        "mae": 0.006614682622186357,
+        "brier": 0.0009982493820682313,
+        "logloss": null
+      }
+    },
+    "EDGE/impact_wav": {
+      "method": "isotonic",
+      "n": 1374,
+      "n_positive": 157,
+      "y_min": 0.0,
+      "y_max": 0.7703703703703704,
+      "feature_cols_hash": "7c5c055b2453416c64c1939490b034e80f1d6b29",
+      "raw": {
+        "bias": 0.039709428652895146,
+        "mae": 0.054024644204953114,
+        "brier": 0.009193663959422477,
+        "logloss": null
+      },
+      "cal": {
+        "bias": -1.2928361276566598e-18,
+        "mae": 0.028794070099246095,
+        "brier": 0.004526906282940992,
+        "logloss": null
+      }
+    },
+    "LB/impact_wav": {
+      "method": "isotonic",
+      "n": 6966,
+      "n_positive": 262,
+      "y_min": 0.0,
+      "y_max": 0.8701298701298701,
+      "feature_cols_hash": "75a820edc90d9a6d051056191f9467ca5cea14c7",
+      "raw": {
+        "bias": 0.008253323613996055,
+        "mae": 0.014865955544691433,
+        "brier": 0.002089308294974092,
+        "logloss": null
+      },
+      "cal": {
+        "bias": 2.5500385291419044e-19,
+        "mae": 0.008067117836477601,
+        "brier": 0.0014230981715223118,
+        "logloss": null
+      }
+    },
+    "DB/impact_wav": {
+      "method": "isotonic",
+      "n": 9789,
+      "n_positive": 516,
+      "y_min": 0.0,
+      "y_max": 0.6736111111111112,
+      "feature_cols_hash": "6b6eaa43d76d1f056d6a2de12bc3e9cf052c1a06",
+      "raw": {
+        "bias": 0.005574855398285437,
+        "mae": 0.011901550244584851,
+        "brier": 0.0011626602211186534,
+        "logloss": null
+      },
+      "cal": {
+        "bias": -1.814645867198131e-19,
+        "mae": 0.007094808070422368,
+        "brier": 0.0009362540575505012,
+        "logloss": null
+      }
+    },
+    "K/impact_wav": {
+      "method": "identity",
+      "n": 1625,
+      "n_positive": 20,
+      "y_min": 0.0,
+      "y_max": 0.21052631578947367,
+      "feature_cols_hash": "8742d99335dd3b9fad6703f8ddd7357e80b4ee88",
+      "raw": {
+        "bias": 0.00041679315134025103,
+        "mae": 0.0032536064048101824,
+        "brier": 0.00023318962851979057,
+        "logloss": null
+      },
+      "cal": {
+        "bias": 0.00041679315134025103,
+        "mae": 0.0032536064048101824,
+        "brier": 0.00023318962851979057,
+        "logloss": null
+      }
+    },
+    "P/impact_wav": {
+      "method": "identity",
+      "n": 908,
+      "n_positive": 18,
+      "y_min": 0.0,
+      "y_max": 0.14285714285714285,
+      "feature_cols_hash": "7a591b028b0f9d6d63af607953fe0f58172e4250",
+      "raw": {
+        "bias": 0.004579419010836885,
+        "mae": 0.006441712612489791,
+        "brier": 0.0003527635727043482,
+        "logloss": null
+      },
+      "cal": {
+        "bias": 0.004579419010836885,
+        "mae": 0.006441712612489791,
+        "brier": 0.0003527635727043482,
+        "logloss": null
+      }
+    }
+  }
+}

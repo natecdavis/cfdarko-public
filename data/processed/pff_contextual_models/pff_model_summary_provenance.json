@@ -1,0 +1,7 @@
+{
+  "_tuning_mode": "fresh",
+  "_tuning_step": "04s_contextual_models_season",
+  "_tuning_stamped_at_utc": "2026-05-15T14:42:31+00:00",
+  "n_models": 207,
+  "use_cached_alpha": false
+}

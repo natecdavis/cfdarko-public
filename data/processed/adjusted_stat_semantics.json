@@ -1,0 +1,318 @@
+{
+  "DB": {
+    "ff": {
+      "cv_r2": null,
+      "semantic": "no_model"
+    },
+    "ints": {
+      "cv_r2": -0.3256835276792666,
+      "semantic": "raw_fallback"
+    },
+    "passes_defended": {
+      "cv_r2": 0.0002512436143283558,
+      "semantic": "raw_fallback"
+    },
+    "sacks": {
+      "cv_r2": 0.0009524446595085001,
+      "semantic": "raw_fallback"
+    },
+    "tackles": {
+      "cv_r2": 0.0006555645044347136,
+      "semantic": "raw_fallback"
+    },
+    "tfl": {
+      "cv_r2": 0.0007213434342404623,
+      "semantic": "raw_fallback"
+    }
+  },
+  "DL": {
+    "ff": {
+      "cv_r2": null,
+      "semantic": "no_model"
+    },
+    "ints": {
+      "cv_r2": 0.26898569223497654,
+      "semantic": "residual"
+    },
+    "passes_defended": {
+      "cv_r2": -0.00041951769945829386,
+      "semantic": "raw_fallback"
+    },
+    "qb_hurries": {
+      "cv_r2": 0.0025876529713955375,
+      "semantic": "raw_fallback"
+    },
+    "sacks": {
+      "cv_r2": 6.876875460324339e-05,
+      "semantic": "raw_fallback"
+    },
+    "tackles": {
+      "cv_r2": 0.0027408814311473016,
+      "semantic": "raw_fallback"
+    },
+    "tfl": {
+      "cv_r2": 0.001490114233620421,
+      "semantic": "raw_fallback"
+    }
+  },
+  "EDGE": {
+    "ff": {
+      "cv_r2": null,
+      "semantic": "no_model"
+    },
+    "ints": {
+      "cv_r2": -0.2787388738718516,
+      "semantic": "raw_fallback"
+    },
+    "passes_defended": {
+      "cv_r2": -0.0017288139649976665,
+      "semantic": "raw_fallback"
+    },
+    "qb_hurries": {
+      "cv_r2": 0.005663510123821647,
+      "semantic": "raw_fallback"
+    },
+    "sacks": {
+      "cv_r2": 0.0009742367056124301,
+      "semantic": "raw_fallback"
+    },
+    "tackles": {
+      "cv_r2": 0.005399774074828434,
+      "semantic": "raw_fallback"
+    },
+    "tfl": {
+      "cv_r2": 0.0037174235566872936,
+      "semantic": "raw_fallback"
+    }
+  },
+  "K": {
+    "fg_att": {
+      "cv_r2": -0.014317375465651497,
+      "semantic": "raw_fallback"
+    },
+    "fg_made": {
+      "cv_r2": -0.009082164497086542,
+      "semantic": "raw_fallback"
+    },
+    "fg_pct": {
+      "cv_r2": -0.020199232887587126,
+      "semantic": "raw_fallback"
+    },
+    "kicking_pts": {
+      "cv_r2": -0.00421578377221056,
+      "semantic": "raw_fallback"
+    },
+    "xp_att": {
+      "cv_r2": -0.012137656553178597,
+      "semantic": "raw_fallback"
+    },
+    "xp_made": {
+      "cv_r2": -0.010200190084759711,
+      "semantic": "raw_fallback"
+    },
+    "xp_pct": {
+      "cv_r2": -0.02093116631352822,
+      "semantic": "raw_fallback"
+    }
+  },
+  "LB": {
+    "ff": {
+      "cv_r2": null,
+      "semantic": "no_model"
+    },
+    "ints": {
+      "cv_r2": -0.6972395306957846,
+      "semantic": "raw_fallback"
+    },
+    "passes_defended": {
+      "cv_r2": -0.0002499086802198791,
+      "semantic": "raw_fallback"
+    },
+    "qb_hurries": {
+      "cv_r2": 7.033981895110397e-05,
+      "semantic": "raw_fallback"
+    },
+    "sacks": {
+      "cv_r2": 0.002558151802330566,
+      "semantic": "raw_fallback"
+    },
+    "tackles": {
+      "cv_r2": 0.0033292648557473603,
+      "semantic": "raw_fallback"
+    },
+    "tfl": {
+      "cv_r2": 0.0017395296214441913,
+      "semantic": "raw_fallback"
+    }
+  },
+  "P": {
+    "net_punt_yards": {
+      "cv_r2": 0.021398008934443935,
+      "semantic": "residual"
+    },
+    "punt_yards": {
+      "cv_r2": -0.013702081856761146,
+      "semantic": "raw_fallback"
+    },
+    "punts": {
+      "cv_r2": -0.017322746406793495,
+      "semantic": "raw_fallback"
+    }
+  },
+  "QB": {
+    "completion_pct": {
+      "cv_r2": -0.0023209177767270365,
+      "semantic": "raw_fallback"
+    },
+    "interceptions": {
+      "cv_r2": -0.023575587623150412,
+      "semantic": "raw_fallback"
+    },
+    "pass_att": {
+      "cv_r2": -0.02071710991797525,
+      "semantic": "raw_fallback"
+    },
+    "pass_share": {
+      "cv_r2": 0.0009214880235997232,
+      "semantic": "raw_fallback"
+    },
+    "pass_tds": {
+      "cv_r2": 0.024713632167652478,
+      "semantic": "residual"
+    },
+    "pass_yards": {
+      "cv_r2": 0.008106644750046528,
+      "semantic": "raw_fallback"
+    },
+    "passer_rating": {
+      "cv_r2": null,
+      "semantic": "no_model"
+    },
+    "ppa_avg_passing": {
+      "cv_r2": 0.03836417878703788,
+      "semantic": "residual"
+    },
+    "rush_att": {
+      "cv_r2": -0.021413784132222228,
+      "semantic": "raw_fallback"
+    },
+    "rush_tds": {
+      "cv_r2": -0.004719951626286924,
+      "semantic": "raw_fallback"
+    },
+    "rush_yards": {
+      "cv_r2": -0.011583958766818973,
+      "semantic": "raw_fallback"
+    },
+    "sacks_taken": {
+      "cv_r2": null,
+      "semantic": "no_model"
+    }
+  },
+  "RB": {
+    "fumbles": {
+      "cv_r2": -0.04548045270835194,
+      "semantic": "raw_fallback"
+    },
+    "ppa_avg_rushing": {
+      "cv_r2": 0.0430249119140004,
+      "semantic": "residual"
+    },
+    "rec": {
+      "cv_r2": -0.04548469286204597,
+      "semantic": "raw_fallback"
+    },
+    "rec_share": {
+      "cv_r2": 0.01172493766142936,
+      "semantic": "residual"
+    },
+    "rec_tds": {
+      "cv_r2": -0.016283697183773115,
+      "semantic": "raw_fallback"
+    },
+    "rec_yards": {
+      "cv_r2": -0.1040398881240691,
+      "semantic": "raw_fallback"
+    },
+    "rush_att": {
+      "cv_r2": -0.006749188111178685,
+      "semantic": "raw_fallback"
+    },
+    "rush_share": {
+      "cv_r2": -0.022557005150367515,
+      "semantic": "raw_fallback"
+    },
+    "rush_tds": {
+      "cv_r2": 0.02067150509069123,
+      "semantic": "residual"
+    },
+    "rush_yards": {
+      "cv_r2": 0.018052065577630203,
+      "semantic": "residual"
+    },
+    "yards_per_carry": {
+      "cv_r2": 0.03183826315429087,
+      "semantic": "residual"
+    }
+  },
+  "TE": {
+    "catch_pct": {
+      "cv_r2": null,
+      "semantic": "no_model"
+    },
+    "ppa_avg": {
+      "cv_r2": 0.0032653860216200897,
+      "semantic": "raw_fallback"
+    },
+    "rec": {
+      "cv_r2": 0.17572645458124736,
+      "semantic": "residual"
+    },
+    "rec_share": {
+      "cv_r2": 0.0012055722874524976,
+      "semantic": "raw_fallback"
+    },
+    "rec_tds": {
+      "cv_r2": 0.004236628455922091,
+      "semantic": "raw_fallback"
+    },
+    "rec_yards": {
+      "cv_r2": -0.03900067451127481,
+      "semantic": "raw_fallback"
+    },
+    "yards_per_rec": {
+      "cv_r2": 0.0007236016601653392,
+      "semantic": "raw_fallback"
+    }
+  },
+  "WR": {
+    "catch_pct": {
+      "cv_r2": null,
+      "semantic": "no_model"
+    },
+    "ppa_avg": {
+      "cv_r2": -0.006011104093410144,
+      "semantic": "raw_fallback"
+    },
+    "rec": {
+      "cv_r2": -0.11620877116024803,
+      "semantic": "raw_fallback"
+    },
+    "rec_share": {
+      "cv_r2": -0.0015195923653679101,
+      "semantic": "raw_fallback"
+    },
+    "rec_tds": {
+      "cv_r2": -0.00422770765347956,
+      "semantic": "raw_fallback"
+    },
+    "rec_yards": {
+      "cv_r2": -0.06563650714517219,
+      "semantic": "raw_fallback"
+    },
+    "yards_per_rec": {
+      "cv_r2": 0.015656247464727602,
+      "semantic": "residual"
+    }
+  }
+}

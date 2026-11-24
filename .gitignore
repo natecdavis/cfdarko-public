@@ -1,0 +1,29 @@
+# Regenerable / large data
+data/raw/
+data/output/
+cache/
+logs/
+__pycache__/
+*.py[cod]
+.env
+.DS_Store
+.venv/
+venv/
+
+# Processed data: ignore everything EXCEPT the JSON tuning/calibration caches
+# (Optuna tuned params, boruta/MI selections, decay betas, Kalman hyperparams,
+# manifests — the 5-6 hr retune artifacts). Track them exhaustively per step
+# directory; binaries (.pkl/.lgb/.parquet) rebuild from these in a --no-tune run.
+data/processed/**
+!data/processed/**/
+!data/processed/**/*.json
+
+# Manual pre-git backup dirs: superseded by git history
+data/processed/*bak*/
+data/processed/_backup*/
+
+# Binary artifacts
+*.pkl
+*.parquet
+*.lgb
+*.pdf

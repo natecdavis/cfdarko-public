@@ -1,0 +1,495 @@
+[
+  {
+    "pos": "QB",
+    "target": "role",
+    "metric": "mae",
+    "pos_only": 0.044717579264596304,
+    "global_only": 0.03749588346938905,
+    "blend_lofo": 0.046957922695518156,
+    "delta_vs_pos_pct": 5.009983697162186,
+    "lofo_weights": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "n_folds": 4
+  },
+  {
+    "pos": "RB",
+    "target": "role",
+    "metric": "mae",
+    "pos_only": 0.0729097339984781,
+    "global_only": 0.036964638313657816,
+    "blend_lofo": 0.036964638313657816,
+    "delta_vs_pos_pct": -49.30081857872447,
+    "lofo_weights": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_folds": 4
+  },
+  {
+    "pos": "WR",
+    "target": "role",
+    "metric": "mae",
+    "pos_only": 0.06181309323710571,
+    "global_only": 0.030706180220794157,
+    "blend_lofo": 0.030706180220794157,
+    "delta_vs_pos_pct": -50.32414879642104,
+    "lofo_weights": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_folds": 4
+  },
+  {
+    "pos": "TE",
+    "target": "role",
+    "metric": "mae",
+    "pos_only": 0.07151247885720553,
+    "global_only": 0.03085978870651416,
+    "blend_lofo": 0.03085978870651416,
+    "delta_vs_pos_pct": -56.8469878269298,
+    "lofo_weights": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_folds": 4
+  },
+  {
+    "pos": "OL",
+    "target": "role",
+    "metric": "mae",
+    "pos_only": 0.04496171546588495,
+    "global_only": 0.0219033973373144,
+    "blend_lofo": 0.0219033973373144,
+    "delta_vs_pos_pct": -51.28433799654781,
+    "lofo_weights": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_folds": 4
+  },
+  {
+    "pos": "DL",
+    "target": "role",
+    "metric": "mae",
+    "pos_only": 0.05754131488334156,
+    "global_only": 0.030362964160098746,
+    "blend_lofo": 0.030362964160098746,
+    "delta_vs_pos_pct": -47.2327592415012,
+    "lofo_weights": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_folds": 4
+  },
+  {
+    "pos": "EDGE",
+    "target": "role",
+    "metric": "mae",
+    "pos_only": 0.18890188401922628,
+    "global_only": 0.061738355039091954,
+    "blend_lofo": 0.061738355039091954,
+    "delta_vs_pos_pct": -67.31723700923582,
+    "lofo_weights": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_folds": 3
+  },
+  {
+    "pos": "LB",
+    "target": "role",
+    "metric": "mae",
+    "pos_only": 0.059270520082345055,
+    "global_only": 0.028654456590341097,
+    "blend_lofo": 0.028654456590341097,
+    "delta_vs_pos_pct": -51.65479136924864,
+    "lofo_weights": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_folds": 4
+  },
+  {
+    "pos": "DB",
+    "target": "role",
+    "metric": "mae",
+    "pos_only": 0.06666267019174142,
+    "global_only": 0.03524073520317998,
+    "blend_lofo": 0.03524073520317998,
+    "delta_vs_pos_pct": -47.13572813417573,
+    "lofo_weights": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_folds": 4
+  },
+  {
+    "pos": "K",
+    "target": "role",
+    "metric": "mae",
+    "pos_only": 0.04895782561810178,
+    "global_only": 0.02343093125836741,
+    "blend_lofo": 0.02343093125836741,
+    "delta_vs_pos_pct": -52.140580259544855,
+    "lofo_weights": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_folds": 4
+  },
+  {
+    "pos": "P",
+    "target": "role",
+    "metric": "mae",
+    "pos_only": 0.05552478591570057,
+    "global_only": 0.025770087908893534,
+    "blend_lofo": 0.025770087908893534,
+    "delta_vs_pos_pct": -53.588136390082674,
+    "lofo_weights": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_folds": 4
+  },
+  {
+    "pos": "QB",
+    "target": "impact_apy",
+    "metric": "mae",
+    "pos_only": 0.004193384746531941,
+    "global_only": 0.002643096157040601,
+    "blend_lofo": 0.002643096157040601,
+    "delta_vs_pos_pct": -36.96986284822724,
+    "lofo_weights": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_folds": 4
+  },
+  {
+    "pos": "RB",
+    "target": "impact_apy",
+    "metric": "mae",
+    "pos_only": 0.0013755875657939867,
+    "global_only": 0.0009956701408643967,
+    "blend_lofo": 0.0009956701408643967,
+    "delta_vs_pos_pct": -27.61855619931417,
+    "lofo_weights": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_folds": 4
+  },
+  {
+    "pos": "WR",
+    "target": "impact_apy",
+    "metric": "mae",
+    "pos_only": 0.0016665582981501147,
+    "global_only": 0.0013597465304337865,
+    "blend_lofo": 0.0013597465304337865,
+    "delta_vs_pos_pct": -18.40990309531267,
+    "lofo_weights": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_folds": 4
+  },
+  {
+    "pos": "TE",
+    "target": "impact_apy",
+    "metric": "mae",
+    "pos_only": 0.0014361662796880815,
+    "global_only": 0.0011628738471621224,
+    "blend_lofo": 0.0011628738471621224,
+    "delta_vs_pos_pct": -19.029302970775433,
+    "lofo_weights": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_folds": 4
+  },
+  {
+    "pos": "OL",
+    "target": "impact_apy",
+    "metric": "mae",
+    "pos_only": 0.0014782923791011161,
+    "global_only": 0.0013905990635412967,
+    "blend_lofo": 0.0013958161799163728,
+    "delta_vs_pos_pct": -5.5791533766069605,
+    "lofo_weights": [
+      0.0,
+      0.0,
+      0.0,
+      0.1
+    ],
+    "n_folds": 4
+  },
+  {
+    "pos": "DL",
+    "target": "impact_apy",
+    "metric": "mae",
+    "pos_only": 0.0016397916683718726,
+    "global_only": 0.0013912862591692818,
+    "blend_lofo": 0.0013912862591692818,
+    "delta_vs_pos_pct": -15.154693977029934,
+    "lofo_weights": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_folds": 4
+  },
+  {
+    "pos": "EDGE",
+    "target": "impact_apy",
+    "metric": "mae",
+    "pos_only": 0.010355186950072998,
+    "global_only": 0.003785412755987566,
+    "blend_lofo": 0.003785412755987566,
+    "delta_vs_pos_pct": -63.444283775476585,
+    "lofo_weights": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_folds": 3
+  },
+  {
+    "pos": "LB",
+    "target": "impact_apy",
+    "metric": "mae",
+    "pos_only": 0.001314052252926981,
+    "global_only": 0.001059675353137235,
+    "blend_lofo": 0.001059675353137235,
+    "delta_vs_pos_pct": -19.35820278250998,
+    "lofo_weights": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_folds": 4
+  },
+  {
+    "pos": "DB",
+    "target": "impact_apy",
+    "metric": "mae",
+    "pos_only": 0.0016370231980007285,
+    "global_only": 0.001380725045107929,
+    "blend_lofo": 0.001380725045107929,
+    "delta_vs_pos_pct": -15.656354363567507,
+    "lofo_weights": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_folds": 4
+  },
+  {
+    "pos": "K",
+    "target": "impact_apy",
+    "metric": "mae",
+    "pos_only": 0.0008659627524718652,
+    "global_only": 0.0005867689751799274,
+    "blend_lofo": 0.0005867689751799274,
+    "delta_vs_pos_pct": -32.240852911396864,
+    "lofo_weights": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_folds": 4
+  },
+  {
+    "pos": "P",
+    "target": "impact_apy",
+    "metric": "mae",
+    "pos_only": 0.0009431399532797534,
+    "global_only": 0.0006222651876753148,
+    "blend_lofo": 0.0007708157475489941,
+    "delta_vs_pos_pct": -18.271329205332123,
+    "lofo_weights": [
+      0.5,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_folds": 4
+  },
+  {
+    "pos": "QB",
+    "target": "impact_wav",
+    "metric": "neg_rho",
+    "pos_only": -0.17860867571908942,
+    "global_only": -0.4506161011537726,
+    "blend_lofo": -0.4506161011537726,
+    "delta_vs_pos_pct": -152.29239248293212,
+    "lofo_weights": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_folds": 4
+  },
+  {
+    "pos": "RB",
+    "target": "impact_wav",
+    "metric": "neg_rho",
+    "pos_only": -0.4171979403638362,
+    "global_only": -0.5753186641492443,
+    "blend_lofo": -0.565372485400679,
+    "delta_vs_pos_pct": -35.51660511737439,
+    "lofo_weights": [
+      0.0,
+      0.2,
+      0.0,
+      0.0
+    ],
+    "n_folds": 4
+  },
+  {
+    "pos": "WR",
+    "target": "impact_wav",
+    "metric": "neg_rho",
+    "pos_only": -0.2956912792283811,
+    "global_only": -0.42304574160623043,
+    "blend_lofo": -0.40353375297668526,
+    "delta_vs_pos_pct": -36.47130684060877,
+    "lofo_weights": [
+      0.0,
+      0.0,
+      0.5,
+      0.0
+    ],
+    "n_folds": 4
+  },
+  {
+    "pos": "TE",
+    "target": "impact_wav",
+    "metric": "neg_rho",
+    "pos_only": -0.39441828642599425,
+    "global_only": -0.32943130695805944,
+    "blend_lofo": -0.3394407381624007,
+    "delta_vs_pos_pct": 13.938894355474845,
+    "lofo_weights": [
+      0.5,
+      0.4,
+      1.0,
+      0.9
+    ],
+    "n_folds": 4
+  },
+  {
+    "pos": "OL",
+    "target": "impact_wav",
+    "metric": "neg_rho",
+    "pos_only": -0.002850677345216157,
+    "global_only": -0.32685450433356633,
+    "blend_lofo": -0.32685450433356633,
+    "delta_vs_pos_pct": -11365.854067352617,
+    "lofo_weights": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_folds": 4
+  },
+  {
+    "pos": "DL",
+    "target": "impact_wav",
+    "metric": "neg_rho",
+    "pos_only": -0.20585970217712798,
+    "global_only": -0.33537683222180614,
+    "blend_lofo": -0.32385167690073813,
+    "delta_vs_pos_pct": -57.3166935907088,
+    "lofo_weights": [
+      0.0,
+      0.0,
+      0.0,
+      0.3
+    ],
+    "n_folds": 4
+  },
+  {
+    "pos": "EDGE",
+    "target": "impact_wav",
+    "metric": "neg_rho",
+    "pos_only": -0.14390703637529492,
+    "global_only": -0.4528497273922812,
+    "blend_lofo": -0.4388146396729829,
+    "delta_vs_pos_pct": -204.92924510556864,
+    "lofo_weights": [
+      0.2,
+      0.0,
+      0.0
+    ],
+    "n_folds": 3
+  },
+  {
+    "pos": "LB",
+    "target": "impact_wav",
+    "metric": "neg_rho",
+    "pos_only": -0.23982040327593868,
+    "global_only": -0.35769240751899856,
+    "blend_lofo": -0.3413192589270153,
+    "delta_vs_pos_pct": -42.32286088448092,
+    "lofo_weights": [
+      0.4,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_folds": 4
+  },
+  {
+    "pos": "DB",
+    "target": "impact_wav",
+    "metric": "neg_rho",
+    "pos_only": -0.3555552496360044,
+    "global_only": -0.40696814528122216,
+    "blend_lofo": -0.4078539472678626,
+    "delta_vs_pos_pct": -14.709021364583544,
+    "lofo_weights": [
+      0.5,
+      0.2,
+      0.4,
+      0.4
+    ],
+    "n_folds": 4
+  }
+]

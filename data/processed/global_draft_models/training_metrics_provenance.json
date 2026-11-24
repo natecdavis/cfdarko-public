@@ -1,0 +1,8 @@
+{
+  "_tuning_mode": "cached",
+  "_tuning_step": "08b_global_draft_model",
+  "_tuning_stamped_at_utc": "2026-11-01T04:01:24+00:00",
+  "n_models": 2,
+  "tune_flag": false,
+  "tune_trials": null
+}

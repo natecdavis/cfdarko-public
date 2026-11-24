@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cfDARKO draft review</title>
+<style>
+  :root {
+    --bg: #fafaf9; --panel: #ffffff; --ink: #1c1917; --muted: #78716c; --line: #e7e5e4;
+    --accent: #2563eb; --accent-soft: #dbeafe; --good: #15803d; --bad: #b91c1c; --hl: #fef3c7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0c0a09; --panel: #1c1917; --ink: #f5f5f4; --muted: #a8a29e; --line: #292524;
+            --accent: #60a5fa; --accent-soft: #1e3a5f; --good: #4ade80; --bad: #f87171; --hl: #3f3212; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         background: var(--bg); color: var(--ink); }
+  header { padding: 16px 24px; border-bottom: 1px solid var(--line); background: var(--panel);
+           display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+  h1 { font-size: 18px; margin: 0 12px 0 0; }
+  label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+  select { font: inherit; padding: 6px 8px; border: 1px solid var(--line); border-radius: 6px;
+           background: var(--bg); color: var(--ink); margin-left: 6px; }
+  .note { color: var(--muted); font-size: 12px; margin-left: auto; max-width: 520px; }
+  main { display: grid; grid-template-columns: 300px 1fr; gap: 0; min-height: calc(100vh - 70px); }
+  nav { border-right: 1px solid var(--line); background: var(--panel); overflow-y: auto; }
+  nav .pick { padding: 10px 16px; border-bottom: 1px solid var(--line); cursor: pointer; }
+  nav .pick:hover { background: var(--bg); }
+  nav .pick.on { background: var(--accent-soft); }
+  nav .pk { font-weight: 600; font-variant-numeric: tabular-nums; }
+  nav .who { color: var(--muted); font-size: 13px; }
+  section { padding: 20px 28px; overflow-x: auto; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px 20px;
+          margin-bottom: 18px; }
+  .card h2 { font-size: 17px; margin: 0 0 4px; }
+  .sub { color: var(--muted); font-size: 13px; }
+  .stats { display: flex; gap: 28px; margin-top: 12px; flex-wrap: wrap; }
+  .stat .k { color: var(--muted); font-size: 12px; }
+  .stat .v { font-size: 18px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  table { border-collapse: collapse; width: 100%; background: var(--panel); border: 1px solid var(--line);
+          border-radius: 10px; overflow: hidden; }
+  th, td { padding: 7px 10px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  th { font-size: 12px; color: var(--muted); font-weight: 600; background: var(--bg); }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  tr.took td { background: var(--hl); font-weight: 600; }
+  tr.gap td { color: var(--muted); text-align: center; font-size: 12px; }
+  .good { color: var(--good); } .bad { color: var(--bad); }
+  .btns { display: flex; gap: 8px; margin-bottom: 14px; }
+  button { font: inherit; padding: 6px 12px; border-radius: 6px; border: 1px solid var(--line);
+           background: var(--panel); color: var(--ink); cursor: pointer; }
+  button:disabled { opacity: .4; cursor: default; }
+  h3 { font-size: 14px; margin: 26px 0 8px; }
+  .tag { font-size: 11px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Draft review</h1>
+  <span><label for="yr">Draft</label><select id="yr"></select></span>
+  <span><label for="tm">Team</label><select id="tm"></select></span>
+  <span class="note" id="note"></span>
+</header>
+<main>
+  <nav id="picks"></nav>
+  <section id="detail"></section>
+</main>
+<script>
+const DATA = __DATA__;
+const TOP = 10;
+const $ = id => document.getElementById(id);
+const yrSel = $("yr"), tmSel = $("tm");
+let cur = { draft: null, team: null, idx: 0 };
+
+const money = v => v == null ? "–" : "$" + (v * DATA.cap / 1e6).toFixed(1) + "M";
+const pct = v => v == null ? "" : (100 * v).toFixed(1) + "% of cap";
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+function vAt(p, k) {
+  if (p.v == null) return null;
+  if (p.b == null) return p.v;
+  const m = D().meta, r = Math.min(Math.max(k / p.b, m.clip[0]), m.clip[1]);
+  return p.v * Math.pow(r, m.gamma);
+}
+// ---- availability (as of draft day) and position drop-off ----
+function normSf(z) {               // 1 − Φ(z), Abramowitz–Stegun 7.1.26
+  const x = Math.abs(z) / Math.SQRT2, t = 1 / (1 + 0.3275911 * x);
+  const erfc = t * (0.254829592 + t * (-0.284496736 + t * (1.421413741 + t * (-1.453152027 + t * 1.061405429)))) * Math.exp(-x * x);
+  return z >= 0 ? erfc / 2 : 1 - erfc / 2;
+}
+function surv(p, t) {              // P(pick > t)
+  if (t < 1 || p.a == null) return 1;
+  if (p.b != null) return normSf((Math.log(t + 0.5) - p.a[0]) / p.a[1]);
+  const F = D().meta.avail_F;
+  return F ? 1 - p.a[0] * F[String(p.a[1])][Math.min(t, 262) - 1] : 1;
+}
+function pAvail(p, k, n) { return n <= k + 1 ? 1 : surv(p, n - 1) / Math.max(surv(p, k), 1e-12); }
+function expBest(list, k, n) {     // E[best value at n] among list, independence assumed
+  const xs = list.map(p => [vAt(p, n), pAvail(p, k, n)]).sort((a, b) => b[0] - a[0]);
+  let none = 1, e = 0;
+  for (const [v, q] of xs) { e += v * q * none; none *= 1 - q; }
+  return e;
+}
+function nextPickAfter(k) { const ps = teamPicks().filter(p => p.k > k); return ps.length ? ps[0].k : null; }
+function dropoff(k, n) {
+  const av = available(k), later = available(n), groups = {};
+  av.forEach(p => (groups[p.vp] = groups[p.vp] || []).push(p));
+  return Object.entries(groups).map(([g, list]) => {
+    const best = list.reduce((a, b) => vAt(b, k) > vAt(a, k) ? b : a);
+    const e = expBest(list, k, n);
+    const act = later.filter(p => p.vp === g).sort((a, b) => vAt(b, n) - vAt(a, n))[0];
+    return { g, best, bestV: vAt(best, k), lasts: pAvail(best, k, n), e, drop: vAt(best, k) - e, act };
+  }).sort((a, b) => b.drop - a.drop);
+}
+const went = p => p.k == null ? "Undrafted" : `#${p.k} ${p.t}`;
+
+function init() {
+  const years = Object.keys(DATA.drafts).sort().reverse();
+  yrSel.innerHTML = years.map(y => `<option>${y}</option>`).join("");
+  const teams = Object.keys(DATA.teams).sort((a, b) => DATA.teams[a].localeCompare(DATA.teams[b]));
+  tmSel.innerHTML = teams.map(t => `<option value="${t}">${esc(DATA.teams[t])}</option>`).join("");
+  const h = new URLSearchParams(location.hash.slice(1));
+  if (h.get("d") && DATA.drafts[h.get("d")]) yrSel.value = h.get("d");
+  if (h.get("t") && DATA.teams[h.get("t")]) tmSel.value = h.get("t");
+  yrSel.onchange = tmSel.onchange = () => { cur.idx = 0; render(); };
+  document.addEventListener("keydown", e => {
+    if (e.target.tagName === "SELECT") return;
+    if (e.key === "ArrowDown" || e.key === "ArrowRight") step(1);
+    if (e.key === "ArrowUp" || e.key === "ArrowLeft") step(-1);
+  });
+  render();
+}
+
+function step(d) {
+  const n = teamPicks().length;
+  const i = cur.idx + d;
+  if (i >= 0 && i < n) { cur.idx = i; render(); }
+}
+
+function D() { return DATA.drafts[yrSel.value]; }
+function teamPicks() { return D().meta.picks.filter(p => p.t === tmSel.value); }
+
+function available(k) {
+  return D().players.filter(p => p.v != null && (p.k == null || p.k >= k))
+    .sort((a, b) => vAt(b, k) - vAt(a, k) || a.m - b.m);
+}
+
+function takenAt(k) {
+  const p = D().players.find(x => x.k === k);
+  if (p) return { p, scored: p.v != null };
+  const u = D().unlinked.find(x => x.k === k);
+  return { p: u, scored: false };
+}
+
+function render() {
+  const d = D(), m = d.meta, team = tmSel.value, picks = teamPicks();
+  history.replaceState(null, "", `#d=${yrSel.value}&t=${team}`);
+  const ns = m.seasons_realized;
+  $("note").textContent = `Board fit as of draft day: complete classes ${m.fit_classes[0] + 1}–${m.fit_classes[1] + 1} drafts`
+    + ` (${m.n_board - m.n_projected} players) + ${m.n_projected} from partially played classes. `
+    + (ns ? `Realized value: ${ns} of 4 rookie seasons played (through ${DATA.last_season}).` : "No NFL seasons played yet.");
+  $("picks").innerHTML = picks.length ? picks.map((p, i) => {
+    const t = takenAt(p.k).p;
+    return `<div class="pick ${i === cur.idx ? "on" : ""}" data-i="${i}">
+      <div class="pk">Round ${p.rd} · Pick ${p.k}</div>
+      <div class="who">${t ? esc(t.n) + " · " + esc(t.p) : "–"}</div></div>`;
+  }).join("") : `<div class="pick"><span class="who">No picks in ${yrSel.value}</span></div>`;
+  document.querySelectorAll("nav .pick[data-i]").forEach(el => el.onclick = () => { cur.idx = +el.dataset.i; render(); });
+  if (!picks.length) { $("detail").innerHTML = summary(picks); return; }
+  $("detail").innerHTML = pickView(picks[cur.idx], cur.idx, picks.length) + summary(picks);
+  $("prev").onclick = () => step(-1); $("next").onclick = () => step(1);
+}
+
+function pickView(pk, i, n) {
+  const ns = D().meta.seasons_realized;
+  const av = available(pk.k);
+  const { p: took, scored } = takenAt(pk.k);
+  const best = av[0];
+  const rankAv = scored ? av.indexOf(took) + 1 : null;
+  const realHdr = ns ? `Realized${ns < 4 ? ` (${ns}/4 seasons)` : ""}` : null;
+  const nx = nextPickAfter(pk.k);
+  const drops = nx ? dropoff(pk.k, nx) : [];
+  const eByPos = Object.fromEntries(drops.map(d => [d.g, d.e]));
+  const waitCell = p => nx ? `<td class="num">${eByPos[p.vp] != null ? money(vAt(p, pk.k) - eByPos[p.vp]) : "–"}</td>` : "";
+  const realCell = p => ns ? `<td class="num">${p && p.r != null ? money(p.r) : "–"}</td>` : "";
+  const row = (p, r) => `<tr class="${p === took ? "took" : ""}">
+      <td class="num">${r}</td><td>${esc(p.n)}</td><td>${esc(p.vp || p.p)}</td><td>${esc(p.s)}</td>
+      <td class="num">${p.b ?? "<span class='tag'>off-board</span>"}</td>
+      <td class="num" title="${pct(vAt(p, pk.k))} if taken here; pre-draft list ${money(p.v)}">${money(vAt(p, pk.k))}</td>
+      ${waitCell(p)}<td>${went(p)}</td>${realCell(p)}</tr>`;
+  let rows = av.slice(0, TOP).map((p, j) => row(p, j + 1)).join("");
+  if (scored && rankAv > TOP) rows += `<tr class="gap"><td colspan="${7 + (ns ? 1 : 0) + (nx ? 1 : 0)}">…</td></tr>` + row(took, rankAv);
+  const tookLine = took
+    ? `${esc(took.n)} <span class="sub">${esc(took.p)} · ${esc(took.s)}</span>`
+    : "unknown";
+  const diff = scored && best ? vAt(took, pk.k) - vAt(best, pk.k) : null;
+  return `<div class="btns"><button id="prev" ${i === 0 ? "disabled" : ""}>← Previous pick</button>
+      <button id="next" ${i === n - 1 ? "disabled" : ""}>Next pick →</button>
+      <span class="sub" style="align-self:center">Pick ${i + 1} of ${n} · arrow keys work too</span></div>
+    <div class="card">
+      <div class="sub">Round ${pk.rd} · Pick ${pk.k} · ${esc(DATA.teams[pk.t])}</div>
+      <h2>Took ${tookLine}</h2>
+      <div class="stats">
+        ${scored ? `<div class="stat"><div class="k">Model rank among available</div><div class="v">#${rankAv} of ${av.length}</div></div>
+        <div class="stat"><div class="k">Model value at this pick</div><div class="v" title="${pct(vAt(took, pk.k))}; pre-draft list ${money(took.v)}">${money(vAt(took, pk.k))}</div></div>
+        <div class="stat"><div class="k">vs model's top available</div><div class="v ${diff < -1e-9 ? "bad" : ""}">${diff < -1e-9 ? "−" + money(-diff) : "Model's #1"}</div></div>
+        <div class="stat"><div class="k">Big-board rank</div><div class="v">${took.b ?? "off-board"}</div></div>`
+        : `<div class="stat"><div class="k">Model</div><div class="v">Not scored</div><div class="sub">No college stats in our data (often FCS / small school)</div></div>`}
+        ${ns ? `<div class="stat"><div class="k">${realHdr}</div><div class="v">${took && took.r != null ? money(took.r) : "–"}</div></div>` : ""}
+      </div>
+    </div>
+    <table><thead><tr><th class="num">#</th><th>Best available by model</th><th>Pos</th><th>School</th>
+      <th class="num">Board</th><th class="num">Value if taken here</th>${nx ? `<th class="num" title="Value now − expected best at his position still there at pick ${nx}">Wait cost (pos.)</th>` : ""}<th>Went</th>${ns ? `<th class="num">${realHdr}</th>` : ""}</tr></thead>
+      <tbody>${rows}</tbody></table>` + dropView(pk, nx, drops, took);
+}
+
+function dropView(pk, nx, drops, took) {
+  if (!nx) return `<h3>Position drop-off</h3><p class="sub">No later pick for this team in this draft.</p>`;
+  const rows = drops.filter(d => d.bestV > 0.005).map(d => `<tr class="${took && took.vp === d.g ? "took" : ""}">
+      <td>${esc(d.g)}</td><td>${esc(d.best.n)}</td><td class="num">${money(d.bestV)}</td>
+      <td class="num">${(100 * d.lasts).toFixed(0)}%</td><td class="num">${money(d.e)}</td>
+      <td class="num"><b>${money(d.drop)}</b></td>
+      <td>${d.act ? esc(d.act.n) + ` <span class="tag">${money(vAt(d.act, nx))}</span>` : "–"}</td></tr>`).join("");
+  return `<h3>Position drop-off: pick ${pk.k} → your next pick ${nx}</h3>
+    <table><thead><tr><th>Pos</th><th>Best now</th><th class="num">Value now</th><th class="num">Lasts to ${nx}</th>
+      <th class="num">Expected best at ${nx}</th><th class="num">Drop</th><th>Actually there at ${nx} (hindsight)</th></tr></thead>
+      <tbody>${rows}</tbody></table>
+    <p class="sub">Expected best = the model's best player at the position likely still on the board at pick ${nx}
+    (availability fit on drafts before this one; players' chances treated as independent), valued at pick ${nx}
+    (a player who slides is worth less). Drop = what waiting on the position costs. The last column uses the
+    actual draft: the best player at the position who really was there at ${nx}. Highlighted: the position of the player taken.</p>`;
+}
+
+function summary(picks) {
+  if (!picks.length) return "";
+  const ns = D().meta.seasons_realized;
+  let tv = 0, tb = 0, tr = 0, tbr = 0;
+  const rows = picks.map(pk => {
+    const av = available(pk.k), best = av[0];
+    const { p: took, scored } = takenAt(pk.k);
+    if (scored) tv += vAt(took, pk.k); if (best) tb += vAt(best, pk.k);
+    if (took && took.r != null) tr += took.r; if (best && best.r != null) tbr += best.r;
+    const rk = scored ? av.indexOf(took) + 1 : null;
+    return `<tr><td class="num">${pk.k}</td><td>${took ? esc(took.n) : "–"} <span class="tag">${took ? esc(took.p) : ""}</span></td>
+      <td class="num">${scored ? money(vAt(took, pk.k)) : "–"}</td><td class="num">${rk ? "#" + rk : "–"}</td>
+      ${ns ? `<td class="num">${took && took.r != null ? money(took.r) : "–"}</td>` : ""}
+      <td>${best ? esc(best.n) + ` <span class="tag">${esc(best.p)}</span>` : "–"}</td>
+      <td class="num">${best ? money(vAt(best, pk.k)) : "–"}</td>
+      ${ns ? `<td class="num">${best && best.r != null ? money(best.r) : "–"}</td>` : ""}</tr>`;
+  }).join("");
+  const real = ns ? `realized ${ns < 4 ? `(${ns}/4)` : ""}` : "";
+  return `<h3>${esc(DATA.teams[tmSel.value])} · ${yrSel.value} draft summary</h3>
+    <table><thead><tr><th class="num">Pick</th><th>Took</th><th class="num">Model value</th><th class="num">Model rank avail.</th>
+      ${ns ? `<th class="num">Took ${real}</th>` : ""}<th>Model's top available</th><th class="num">Its model value</th>
+      ${ns ? `<th class="num">Its ${real}</th>` : ""}</tr></thead>
+    <tbody>${rows}</tbody>
+    <tfoot><tr><th></th><th>Total</th><th class="num">${money(tv)}</th><th></th>${ns ? `<th class="num">${money(tr)}</th>` : ""}
+      <th></th><th class="num">${money(tb)}</th>${ns ? `<th class="num">${money(tbr)}</th>` : ""}</tr></tfoot></table>
+    <p class="sub">"Model's top available" is the model's best player left at each pick on its own; the picks interact,
+    so the column total is not a draft the team could have made exactly. Values are 4-year rookie-deal value at today's cap, if taken at that pick: board players still available
+    past their board rank are marked down (×(pick ÷ board rank)^${D().meta.gamma.toFixed(2)}, fit on drafts before this one);
+    reaches keep their board value.</p>`;
+}
+
+init();
+</script>
+</body>
+</html>

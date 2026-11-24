@@ -1,0 +1,179 @@
+{
+  "_manifest_version": 2,
+  "_written_at_utc": "2026-10-31T22:13:49+00:00",
+  "_mode_used": "fresh",
+  "_step_name": "08_draft_models",
+  "by_key": {
+    "DB/impact": {
+      "feature_cols_hash": "6b6eaa43d76d1f056d6a2de12bc3e9cf052c1a06",
+      "monotone_for_key": false,
+      "snapshot_n_rows": 136733
+    },
+    "DB/impact_wav": {
+      "feature_cols_hash": "6b6eaa43d76d1f056d6a2de12bc3e9cf052c1a06",
+      "monotone_for_key": false,
+      "snapshot_n_rows": 136733
+    },
+    "DB/role": {
+      "feature_cols_hash": "6b6eaa43d76d1f056d6a2de12bc3e9cf052c1a06",
+      "monotone_for_key": false,
+      "snapshot_n_rows": 136733
+    },
+    "DL/impact": {
+      "feature_cols_hash": "7c5c055b2453416c64c1939490b034e80f1d6b29",
+      "monotone_for_key": false,
+      "snapshot_n_rows": 136733
+    },
+    "DL/impact_wav": {
+      "feature_cols_hash": "7c5c055b2453416c64c1939490b034e80f1d6b29",
+      "monotone_for_key": true,
+      "snapshot_n_rows": 136733
+    },
+    "DL/role": {
+      "feature_cols_hash": "7c5c055b2453416c64c1939490b034e80f1d6b29",
+      "monotone_for_key": false,
+      "snapshot_n_rows": 136733
+    },
+    "EDGE/impact": {
+      "feature_cols_hash": "7c5c055b2453416c64c1939490b034e80f1d6b29",
+      "monotone_for_key": false,
+      "snapshot_n_rows": 136733
+    },
+    "EDGE/impact_wav": {
+      "feature_cols_hash": "7c5c055b2453416c64c1939490b034e80f1d6b29",
+      "monotone_for_key": false,
+      "snapshot_n_rows": 136733
+    },
+    "EDGE/role": {
+      "feature_cols_hash": "7c5c055b2453416c64c1939490b034e80f1d6b29",
+      "monotone_for_key": false,
+      "snapshot_n_rows": 136733
+    },
+    "K/impact": {
+      "feature_cols_hash": "e0535e84f3e3a73d7d6f6a8a5a3d1304bc8975de",
+      "monotone_for_key": true,
+      "snapshot_n_rows": 136733
+    },
+    "K/impact_wav": {
+      "feature_cols_hash": "e0535e84f3e3a73d7d6f6a8a5a3d1304bc8975de",
+      "monotone_for_key": false,
+      "snapshot_n_rows": 136733
+    },
+    "K/role": {
+      "feature_cols_hash": "e0535e84f3e3a73d7d6f6a8a5a3d1304bc8975de",
+      "monotone_for_key": false,
+      "snapshot_n_rows": 136733
+    },
+    "LB/impact": {
+      "feature_cols_hash": "75a820edc90d9a6d051056191f9467ca5cea14c7",
+      "monotone_for_key": true,
+      "snapshot_n_rows": 136733
+    },
+    "LB/impact_wav": {
+      "feature_cols_hash": "75a820edc90d9a6d051056191f9467ca5cea14c7",
+      "monotone_for_key": false,
+      "snapshot_n_rows": 136733
+    },
+    "LB/role": {
+      "feature_cols_hash": "75a820edc90d9a6d051056191f9467ca5cea14c7",
+      "monotone_for_key": false,
+      "snapshot_n_rows": 136733
+    },
+    "OL/impact": {
+      "feature_cols_hash": "ed933ca8673d17e8a7e18c470e6a110d42242ad8",
+      "monotone_for_key": false,
+      "snapshot_n_rows": 136733
+    },
+    "OL/impact_wav": {
+      "feature_cols_hash": "ed933ca8673d17e8a7e18c470e6a110d42242ad8",
+      "monotone_for_key": true,
+      "snapshot_n_rows": 136733
+    },
+    "OL/role": {
+      "feature_cols_hash": "ed933ca8673d17e8a7e18c470e6a110d42242ad8",
+      "monotone_for_key": false,
+      "snapshot_n_rows": 136733
+    },
+    "P/impact": {
+      "feature_cols_hash": "eed7fc8463381e6afe8da715ecaa6ff178249159",
+      "monotone_for_key": false,
+      "snapshot_n_rows": 136733
+    },
+    "P/impact_wav": {
+      "feature_cols_hash": "eed7fc8463381e6afe8da715ecaa6ff178249159",
+      "monotone_for_key": false,
+      "snapshot_n_rows": 136733
+    },
+    "P/role": {
+      "feature_cols_hash": "eed7fc8463381e6afe8da715ecaa6ff178249159",
+      "monotone_for_key": false,
+      "snapshot_n_rows": 136733
+    },
+    "QB/impact": {
+      "feature_cols_hash": "a8e42e9e12d580089f40e14f950b4cc4cd927db7",
+      "monotone_for_key": false,
+      "snapshot_n_rows": 136733
+    },
+    "QB/impact_wav": {
+      "feature_cols_hash": "a8e42e9e12d580089f40e14f950b4cc4cd927db7",
+      "monotone_for_key": false,
+      "snapshot_n_rows": 136733
+    },
+    "QB/role": {
+      "feature_cols_hash": "a8e42e9e12d580089f40e14f950b4cc4cd927db7",
+      "monotone_for_key": false,
+      "snapshot_n_rows": 136733
+    },
+    "RB/impact": {
+      "feature_cols_hash": "c8b2322ebd12f60dd0eff5bebc7273c72d228309",
+      "monotone_for_key": true,
+      "snapshot_n_rows": 136733
+    },
+    "RB/impact_wav": {
+      "feature_cols_hash": "c8b2322ebd12f60dd0eff5bebc7273c72d228309",
+      "monotone_for_key": true,
+      "snapshot_n_rows": 136733
+    },
+    "RB/role": {
+      "feature_cols_hash": "c8b2322ebd12f60dd0eff5bebc7273c72d228309",
+      "monotone_for_key": false,
+      "snapshot_n_rows": 136733
+    },
+    "TE/impact": {
+      "feature_cols_hash": "037780f60e6b71d4b44824264aeabd291fa7b724",
+      "monotone_for_key": false,
+      "snapshot_n_rows": 136733
+    },
+    "TE/impact_wav": {
+      "feature_cols_hash": "037780f60e6b71d4b44824264aeabd291fa7b724",
+      "monotone_for_key": false,
+      "snapshot_n_rows": 136733
+    },
+    "TE/role": {
+      "feature_cols_hash": "037780f60e6b71d4b44824264aeabd291fa7b724",
+      "monotone_for_key": false,
+      "snapshot_n_rows": 136733
+    },
+    "WR/impact": {
+      "feature_cols_hash": "f84dee245aeb7411406457c8fda975b419db9424",
+      "monotone_for_key": true,
+      "snapshot_n_rows": 136733
+    },
+    "WR/impact_wav": {
+      "feature_cols_hash": "f84dee245aeb7411406457c8fda975b419db9424",
+      "monotone_for_key": true,
+      "snapshot_n_rows": 136733
+    },
+    "WR/role": {
+      "feature_cols_hash": "f84dee245aeb7411406457c8fda975b419db9424",
+      "monotone_for_key": false,
+      "snapshot_n_rows": 136733
+    }
+  },
+  "global_context": {
+    "lgbm_defaults_hash": "af085b2e23221668b0d91b0cdb0e3fa55cc5b4ea",
+    "draft_train_cutoff_year": 2019,
+    "tuning_objective": "role=logloss;impact=spearman"
+  },
+  "n_keys": 33
+}

@@ -1,0 +1,56 @@
+{
+  "run_id": "20261031_214005_global_df703ba0ab25",
+  "timestamp": "20261031_214005",
+  "kind": "global_draft_model",
+  "config_hash": "df703ba0ab25",
+  "config": {
+    "ROLE_LABEL_HORIZON_YEARS": 3,
+    "DRAFT_TRAIN_CUTOFF_YEAR": 2019,
+    "DRAFT_VAL_START_YEAR": 2020,
+    "FINAL_TRAIN_CUTOFF": 2024,
+    "n_features": 912,
+    "LGBM_PARAMS_DEFAULTS": {
+      "n_estimators": 500,
+      "learning_rate": 0.05,
+      "max_depth": 4,
+      "num_leaves": 15,
+      "min_child_samples": 20,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "reg_alpha": 0.1,
+      "reg_lambda": 1.0,
+      "random_state": 42,
+      "verbose": -1
+    }
+  },
+  "args": {
+    "tune": true,
+    "tune_trials": 30
+  },
+  "models": {
+    "global_impact_apy": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.001061211237209249,
+      "avg_best_iter": 381,
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.0005321373795462535,
+      "holdout_spearman": 0.38342934800072764,
+      "n_full_train": 111808,
+      "n_features": 912
+    },
+    "global_impact_wav": {
+      "n_cv_folds": 4,
+      "cv_mae": 0.10266164249851556,
+      "avg_best_iter": 312,
+      "holdout_train_end": 2021,
+      "holdout_val_start": 2022,
+      "holdout_val_end": 2024,
+      "holdout_mae": 0.09468838787343974,
+      "holdout_spearman": 0.5415478727055482,
+      "n_full_train": 4186,
+      "n_features": 912
+    }
+  }
+}

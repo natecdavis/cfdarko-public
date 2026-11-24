@@ -1,0 +1,93 @@
+{
+  "_manifest_version": 2,
+  "_written_at_utc": "2026-10-31T20:54:08+00:00",
+  "_mode_used": "fresh",
+  "_step_name": "04d_calibrate_kalman_draft",
+  "stats": [
+    "completion_pct",
+    "fg_att",
+    "fg_made",
+    "fg_pct",
+    "fumbles",
+    "interceptions",
+    "ints",
+    "kicking_pts",
+    "net_punt_yards",
+    "pass_att",
+    "pass_share",
+    "pass_tds",
+    "pass_yards",
+    "passes_defended",
+    "ppa_avg",
+    "ppa_avg_passing",
+    "ppa_avg_rushing",
+    "punt_yards",
+    "punts",
+    "qb_hurries",
+    "rec",
+    "rec_share",
+    "rec_tds",
+    "rec_yards",
+    "rush_att",
+    "rush_share",
+    "rush_tds",
+    "rush_yards",
+    "sacks",
+    "tackles",
+    "tfl",
+    "xp_att",
+    "xp_made",
+    "xp_pct",
+    "yards_per_carry",
+    "yards_per_rec"
+  ],
+  "cal_season_cutoff": 2020,
+  "interseason_days": 240.0,
+  "decay_betas_role_hash": "363c67c4443a7857",
+  "nfl_labels_file": {
+    "n_rows": 137807,
+    "columns": [
+      "best_apy_by_y5",
+      "career_w_av",
+      "draft_year",
+      "first_nfl_season",
+      "guar_by_y5",
+      "has_nfl_data",
+      "impact_apy_target",
+      "impact_target",
+      "impact_traj_y3_score",
+      "impact_trajectory_score",
+      "impact_w_av_per_game",
+      "is_bridge",
+      "is_udfa",
+      "label_apy_raw",
+      "last_college_season_year",
+      "nfl_games",
+      "pfr_id",
+      "player_id",
+      "player_name",
+      "role_target",
+      "role_traj_y3_score",
+      "role_trajectory_score",
+      "usage_source",
+      "usage_y34",
+      "value_group",
+      "value_target"
+    ]
+  },
+  "param_bounds": [
+    [
+      0.5,
+      10.0
+    ],
+    [
+      1.0,
+      8.0
+    ],
+    [
+      1.0,
+      10.0
+    ]
+  ],
+  "objective": "impact_target"
+}

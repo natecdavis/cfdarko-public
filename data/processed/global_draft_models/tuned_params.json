@@ -1,0 +1,35 @@
+{
+  "global/role": {
+    "learning_rate": 0.14576862089722212,
+    "max_depth": 9,
+    "num_leaves": 28,
+    "min_child_samples": 8,
+    "subsample": 0.7777253268000283,
+    "colsample_bytree": 0.8710761194921967,
+    "reg_alpha": 0.02806911135676578,
+    "reg_lambda": 0.405482174487353,
+    "min_split_gain": 0.00013358117986059386
+  },
+  "global/impact_apy": {
+    "learning_rate": 0.00937040021383848,
+    "max_depth": 6,
+    "num_leaves": 58,
+    "min_child_samples": 48,
+    "subsample": 0.7998301423440095,
+    "colsample_bytree": 0.9305844495501246,
+    "reg_alpha": 0.42336791757445186,
+    "reg_lambda": 12.193450128057098,
+    "min_split_gain": 0.00022669160504520957
+  },
+  "global/impact_wav": {
+    "learning_rate": 0.014353844207272433,
+    "max_depth": 12,
+    "num_leaves": 36,
+    "min_child_samples": 75,
+    "subsample": 0.5823636710645129,
+    "colsample_bytree": 0.5977574300853863,
+    "reg_alpha": 0.8972158662042135,
+    "reg_lambda": 4.912317708336958,
+    "min_split_gain": 0.000847637762988929
+  }
+}

@@ -1,0 +1,9 @@
+check,passed,severity,detail
+bridge_pid_resolution,True,WARNING,"6055 bridge pids, 0 not in union(player_seasons, rosters)"
+attributes_covers_snapshot,True,WARNING,"snapshot has 123893 pids, attributes has 123919; 0 snapshot pids absent from attributes"
+skill_estimates_match_gamelogs,True,ERROR,"adjusted_gamelogs rows=894,233, skill_estimates rows=894,356, diff=+123"
+snapshot_unique_pids,True,ERROR,"snapshot has 123,893 rows, 0 duplicate player_ids"
+bridge_in_labels,True,WARNING,"bridge has 6,055 pids, labels[is_bridge] has 6,055; 0 bridge pids missing label rows"
+latest_cohort,True,ERROR,"latest has 123,893 pids, 0 not in snapshot"
+roster_only_fallback,True,ERROR,"49,995 pids in rosters but not player_seasons; 49,995 of those reached player_attributes (must be >1,000 for fallback to be working)"
+n_seasons_recompute,True,WARNING,"sample=100, mismatches=0 (expected 0 — n_seasons should be union over rosters/player_seasons/gamelogs)"

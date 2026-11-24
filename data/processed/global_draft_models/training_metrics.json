@@ -1,0 +1,26 @@
+{
+  "global_impact_apy": {
+    "n_cv_folds": 4,
+    "cv_mae": 0.0010624808084736914,
+    "avg_best_iter": 382,
+    "holdout_train_end": 2021,
+    "holdout_val_start": 2022,
+    "holdout_val_end": 2024,
+    "holdout_mae": 0.0005333336894944577,
+    "holdout_spearman": 0.3849690540883384,
+    "n_full_train": 111254,
+    "n_features": 912
+  },
+  "global_impact_wav": {
+    "n_cv_folds": 4,
+    "cv_mae": 0.10318275771070902,
+    "avg_best_iter": 283,
+    "holdout_train_end": 2021,
+    "holdout_val_start": 2022,
+    "holdout_val_end": 2024,
+    "holdout_mae": 0.09495461610406847,
+    "holdout_spearman": 0.5415441199048207,
+    "n_full_train": 4186,
+    "n_features": 912
+  }
+}

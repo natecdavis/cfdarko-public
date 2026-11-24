@@ -1,0 +1,7 @@
+{
+  "_tuning_mode": "cached-stale",
+  "_tuning_step": "04_contextual_models",
+  "_tuning_stamped_at_utc": "2026-11-01T03:40:44+00:00",
+  "n_models": 66,
+  "use_cached_alpha": true
+}

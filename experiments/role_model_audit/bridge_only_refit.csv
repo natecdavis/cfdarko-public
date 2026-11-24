@@ -1,0 +1,3 @@
+training_set,n_train,val_pred_mean,val_actual_mean,val_auc,2025_pred_mean,2025_pct_>=0.40,2025_pct_in_45_55,2025_top_decile
+production (bridge + non-bridge zeros),3240,0.104,0.082,0.9985,0.034,0.023,0.001,0.054
+bridge-only,480,0.836,0.082,0.8201,0.815,1.0,0.009,0.915

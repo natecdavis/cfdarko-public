@@ -1,0 +1,140 @@
+{
+  "generated": "2026-07-26T17:40:59",
+  "replacement_levels": {
+    "DB": 0.003800338235294117,
+    "DL": 0.0038900000000000007,
+    "EDGE": 0.0038900000000000007,
+    "K": 0.0039250000000000005,
+    "LB": 0.004126807563959956,
+    "OL": 0.0037985294117647054,
+    "P": 0.004191691176470588,
+    "QB": 0.006888750000000001,
+    "RB": 0.003783209558823529,
+    "TE": 0.003710574375568814,
+    "WR": 0.0037041156840934373
+  },
+  "historical": {
+    "folds": [
+      {
+        "val_start": 2013,
+        "val_end": 2015,
+        "n": 688,
+        "rho_raw": 0.3689359760066742,
+        "rho_over_replacement": 0.3637763998563459,
+        "delta": -0.005159576150328304
+      },
+      {
+        "val_start": 2016,
+        "val_end": 2018,
+        "n": 709,
+        "rho_raw": 0.7038828024313635,
+        "rho_over_replacement": 0.7046507356113307,
+        "delta": 0.0007679331799672617
+      },
+      {
+        "val_start": 2019,
+        "val_end": 2021,
+        "n": 747,
+        "rho_raw": 0.7042630587376532,
+        "rho_over_replacement": 0.7079222440415046,
+        "delta": 0.0036591853038514532
+      }
+    ],
+    "pooled": {
+      "n": 2144,
+      "rho_raw": 0.6236695587816421,
+      "rho_over_replacement": 0.6246931971476594,
+      "delta": 0.0010236383660172654
+    },
+    "within_position_control": {
+      "DB": {
+        "n": 433,
+        "rho_raw": 0.6277177739971999,
+        "rho_over_replacement": 0.6277177739971999
+      },
+      "DL": {
+        "n": 241,
+        "rho_raw": 0.678802457638662,
+        "rho_over_replacement": 0.678802457638662
+      },
+      "EDGE": {
+        "n": 179,
+        "rho_raw": 0.6298458499224776,
+        "rho_over_replacement": 0.6298458499224776
+      },
+      "K": {
+        "n": 19,
+        "rho_raw": NaN,
+        "rho_over_replacement": NaN
+      },
+      "LB": {
+        "n": 212,
+        "rho_raw": 0.6797847785720905,
+        "rho_over_replacement": 0.6797847785720905
+      },
+      "OL": {
+        "n": 336,
+        "rho_raw": 0.6364196459913033,
+        "rho_over_replacement": 0.6364196459913033
+      },
+      "OTHER": {
+        "n": 8,
+        "rho_raw": NaN,
+        "rho_over_replacement": NaN
+      },
+      "P": {
+        "n": 13,
+        "rho_raw": NaN,
+        "rho_over_replacement": NaN
+      },
+      "QB": {
+        "n": 105,
+        "rho_raw": 0.6789018514773686,
+        "rho_over_replacement": 0.6789018514773686
+      },
+      "RB": {
+        "n": 195,
+        "rho_raw": 0.5576765123954679,
+        "rho_over_replacement": 0.5576765123954679
+      },
+      "TE": {
+        "n": 115,
+        "rho_raw": 0.5215420224288636,
+        "rho_over_replacement": 0.5215420224288636
+      },
+      "WR": {
+        "n": 288,
+        "rho_raw": 0.5887550482487833,
+        "rho_over_replacement": 0.5887550482487833
+      }
+    },
+    "within_position_moved": []
+  },
+  "current_class": {
+    "n_current": 20556,
+    "rho_raw_vs_over_replacement": 0.05365390794984344,
+    "top100_overlap": 100,
+    "top100_position_mix_raw": {
+      "DB": 28,
+      "QB": 20,
+      "WR": 12,
+      "TE": 12,
+      "OL": 9,
+      "EDGE": 8,
+      "DL": 6,
+      "LB": 3,
+      "RB": 2
+    },
+    "top100_position_mix_over_replacement": {
+      "DB": 28,
+      "QB": 20,
+      "WR": 12,
+      "TE": 12,
+      "OL": 9,
+      "EDGE": 8,
+      "DL": 6,
+      "LB": 3,
+      "RB": 2
+    }
+  }
+}

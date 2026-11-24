@@ -1,0 +1,15 @@
+{
+  "min_wav_to_impute": 30.0,
+  "n_imputed": 75,
+  "n_by_position": {
+    "OL": 26,
+    "WR": 5,
+    "DB": 18,
+    "RB": 6,
+    "LB": 11,
+    "TE": 1,
+    "DL": 8
+  },
+  "mean_imputed_value": 0.057118847404958435,
+  "n_left_as_true_zero": 1104
+}

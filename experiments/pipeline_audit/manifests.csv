@@ -1,0 +1,8 @@
+path,version,mode_used,step_name,written_at_utc,fingerprint_keys,note
+data/processed/contextual_models/model_summary_manifest.json,2,cached,04_contextual_models,2026-05-04T11:53:19+00:00,"bridge_data_shape,bridge_players_file,context_features,elasticnet_l1_ratios,n_models,ridge_alpha_grid",ok
+data/processed/decay_betas_manifest.json,1,,,,"config_hash,written_at",pre-v2
+data/processed/decay_betas_role_manifest.json,2,fresh,04b_calibrate_betas_role,2026-05-04T11:55:14+00:00,"adjusted_gamelogs_file,bounds,cal_season_cutoff,nfl_labels_file,stats",ok
+data/processed/draft_models/tuned_params_manifest.json,1,,,,"hashes_by_key,n_keys,written_at",pre-v2
+data/processed/draft_models/tuned_params_monotone_manifest.json,1,,,,"hashes_by_key,n_keys,written_at",pre-v2
+data/processed/global_draft_models/tuned_params_manifest.json,1,,,,"feature_cols_hash,n_features,written_at",pre-v2
+data/processed/kalman_hyperparams_draft_manifest.json,1,,,,"config_hash,written_at",pre-v2

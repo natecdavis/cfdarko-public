@@ -1,0 +1,25 @@
+{
+  "_manifest_version": 2,
+  "_written_at_utc": "2026-11-01T01:13:22+00:00",
+  "_mode_used": "fresh",
+  "_step_name": "08b_global_draft_model",
+  "by_key": {
+    "global/impact_apy": {
+      "feature_cols_hash": "732db36798bb120a8ea7c70a085e69982b20b617",
+      "n_features_in": 912,
+      "n_features_after": 32
+    },
+    "global/impact_wav": {
+      "feature_cols_hash": "732db36798bb120a8ea7c70a085e69982b20b617",
+      "n_features_in": 912,
+      "n_features_after": 25
+    }
+  },
+  "global_context": {
+    "snapshot_n_rows": 136733,
+    "boruta_max_iter": 100,
+    "boruta_percentile": 100,
+    "boruta_alpha": 0.05
+  },
+  "n_keys": 2
+}
